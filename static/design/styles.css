@@ -50,9 +50,6 @@ ul {
     padding: 0;
     list-style: none;
 }
-section {
-    height: 100vh;
-}
 .owl-carousel .item {
     position: relative;
     z-index: 100;
@@ -77,14 +74,28 @@ section {
 .owl-nav .owl-next {
     border: 2px solid red;
 }
-/* navbar */
+/* navbar start */
 .nav-logo-container {
     width: 60px;
 }
 .navigation ul li {
     padding: 10px 20px;
 }
-/* navbar */
+/* navbar end */
+/* home start */
 .home {
     overflow: hidden;
 }
+/* home end  */
+/* footer start */
+footer {
+    background-color: #252525;
+    color: #f2f2f2;
+}
+footer h3 {
+    font-family: 'Bebas Neue', cursive;
+}
+footer ul li {
+    font-size: 14px;
+}
+/* footer end  */
