@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@300;400;500;600;700&display=swap');
 *,
 *::before,
 *::after {
@@ -8,7 +8,9 @@
     scroll-behavior: smooth;
     text-decoration: none;
     list-style: none;
-    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
 }
 .zz {
     border: 2px solid red;
@@ -32,19 +34,21 @@ a {
     color: unset;
 }
 nav {
-    background: transparent;
-    width: 100%;
     z-index: 1000;
     padding: 10px 0;
-}
-nav.sticky {
     position: sticky;
     top: 0;
-    background: #fff;
+    background: #0a0a0a;
+    color: #f2f2f2;
+    font-weight: 500;
+}
+nav.sticky {
+    background: #0a0a0a;
     box-shadow: 0px 4px 15px rgb(0 0 0 / 8%);
 }
-ul{
+ul {
     padding: 0;
+    list-style: none;
 }
 section {
     height: 100vh;
@@ -73,6 +77,14 @@ section {
 .owl-nav .owl-next {
     border: 2px solid red;
 }
+/* navbar */
 .nav-logo-container {
     width: 60px;
+}
+.navigation ul li {
+    padding: 10px 20px;
+}
+/* navbar */
+.home {
+    overflow: hidden;
 }
