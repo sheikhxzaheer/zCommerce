@@ -31,6 +31,7 @@ body {
 }
 img {
     width: 100%;
+    border-radius: 4px;
 }
 a {
     text-decoration: none;
@@ -59,7 +60,7 @@ ul {
 }
 .owl-nav>div {
     position: absolute;
-    top: 50%;
+    bottom: -20%;
     color: #cdcbcd;
     
 }
@@ -69,10 +70,10 @@ ul {
 
 }
 .owl-nav .owl-prev {
-    left: -30px;
+    right: 10%;
 }
 .owl-nav .owl-next {
-    right: -30px;
+    right: 4%;
 }
 /* heading  */
 .heading h2 {
@@ -109,6 +110,7 @@ ul {
 /* home start */
 .home {
     overflow: hidden;
+    height: 100%;
 }
 /* home end  */
 /* feature section */
@@ -128,6 +130,37 @@ ul {
     transform: scale(1.1);
 }
 /* essencial section  */
+/* banner section */
+.product-card-2 {
+    color: #252525;
+    top: 15%;
+    left: 5%;
+    transform: translate(5%, 15%);
+}
+.product-card-2 h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+    margin-top: 40px;
+}
+/* banner section */
+/* product page */
+.product-prod {
+    position: relative;
+}
+.prod-content-container h5 {
+    font-size: 18px;
+}
+.prod-content-container h6 {
+    font-size: 14px;
+}
+.prod-content-container h6 {
+    font-size: 14px;
+}
+.prod-content-container h2 {
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+}
+/* product page */
 /* footer start */
 footer {
     background-color: #252525;

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="heading row">
+            <div class="col-lg-12 z-center-down position-relative py-5">
+                <h2 class="heading-back">PRODUCTS</h2>
+                <h2>SHOES</h2>
+                <h6>MENS WEAR</h6>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hey">
+    <div class="container">
+        <div class="row position-relative">
+            <div class="col-lg-12">
+                <div class="row row-cols-4">
+                    <div class="col">
+                        <div class="product-prod p-1">
+                            <div class="prod-img-container">
+                                <img src="{% static 'images/nike-1.webp' %}" alt="">
+                            </div>
+                            <div class="prod-content-container py-4">
+                                <h5>NikeCourt Air Zoom Vapor 9.5 Tour Premium</h5>
+                                <h6>Men's Tennis Shoes</h6>
+                                <h6>1 Colour</h6>
+                                <h2>$ 220</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
