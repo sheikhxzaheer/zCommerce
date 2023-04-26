@@ -9,8 +9,8 @@ $(".owl-carousel").owlCarousel({
   margin: 10,
   nav: true,
   navText: [
-    "<box-icon name='chevron-left' type='solid'></box-icon>",
-    "<box-icon name='chevron-right'></box-icon>"
+    "<i class='fa-solid fa-chevron-left'></i>",
+    "<i class='fa-solid fa-chevron-right'></i>" 
   ],
   autoplay: true,
   autoplayHoverPause: true,

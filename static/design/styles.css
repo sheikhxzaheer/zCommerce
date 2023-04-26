@@ -12,6 +12,9 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
+.bebas {
+    font-family: 'Bebas Neue', cursive;
+}
 .zz {
     border: 2px solid red;
 }
@@ -58,9 +61,12 @@ ul {
     position: absolute;
     top: 50%;
     color: #cdcbcd;
+    
 }
 .owl-nav i {
-    font-size: 52px;
+    font-size: 20px;
+    color: #0a0a0a;
+
 }
 .owl-nav .owl-prev {
     left: -30px;
@@ -68,12 +74,30 @@ ul {
 .owl-nav .owl-next {
     right: -30px;
 }
-.owl-nav .owl-prev {
-    border: 2px solid red;
+/* heading  */
+.heading h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.owl-nav .owl-next {
-    border: 2px solid red;
+.heading-back {
+    content: "";
+    color: #252525;
+    opacity: 0.1;
+    font-size: 100px !important;
+    z-index: -10;
+    position: absolute;
+    letter-spacing: 50px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%);
 }
+/* heading  */
 /* navbar start */
 .nav-logo-container {
     width: 60px;
@@ -87,6 +111,23 @@ ul {
     overflow: hidden;
 }
 /* home end  */
+/* feature section */
+.feature-card h2 {
+
+}
+/* feature section */
+/* essencial section  */
+.gender-container {
+    overflow: hidden;
+}
+.gender-container img {
+    transition: .30s all ease;
+    transform: scale(1);
+}
+.gender-container img:hover {
+    transform: scale(1.1);
+}
+/* essencial section  */
 /* footer start */
 footer {
     background-color: #252525;
