@@ -157,6 +157,19 @@ ul {
     font-size: 35px;
     font-family: 'Bebas Neue', cursive;
 }
+.product-price-offer{
+    color: #ff4545;
+}
+.offer-price{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.offer-price h4 {
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: line-through;
+}
 /* product page */
 /* footer start */
 footer {

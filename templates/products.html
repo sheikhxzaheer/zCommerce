@@ -12,7 +12,7 @@
         </div>
     </div>
 </section>
-<section class="hey">
+<section class="hey product-section">
     <div class="container">
         <div class="row position-relative">
             <div class="col-lg-12">
@@ -30,7 +30,14 @@
                                     <h5>{{product.product_title}}</h5>
                                     <h6>Men's Tennis Shoes</h6>
                                     <h6>1 Colour</h6>
-                                    <h2>$ 220</h2>
+                                    {% if product.product_offer_price %}
+                                    <div class="offer-price">
+                                        <h2 class="product-price-offer">${{product.product_offer_price}}</h2>
+                                        <h4>${{product.product_price}}</h4>
+                                    </div>
+                                    {% else %}
+                                    <h2>${{product.product_price}}</h2>
+                                    {% endif %}
                                 </div>
                             </div>
                         </a>
@@ -41,6 +48,9 @@
                 </div>
             </div>
         </div>
+        {% include 'pagination.html' %}
+        {% block pagination %}
+        {% endblock %}
     </div>
 </section>
 {% endblock content %}
