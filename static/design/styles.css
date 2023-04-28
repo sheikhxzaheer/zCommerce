@@ -185,8 +185,21 @@ footer ul li {
 /* footer end  */
 
 /* pagination page */
-.z-pagi-a{
+.step-links{
+    display: flex;
+}
+.z-pagi-a {
     background-color: #252525;
     color: #fff;
+    padding: 10px;
+    display: flex;
+    height: 40px;
+    min-width: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin: 8px;
+    border-radius: 5px;
 }
 /* pagination page */
