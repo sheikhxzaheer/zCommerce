@@ -11,3 +11,10 @@ def Products(request):
        "products": products,
     }
     return render(request, "products.html", productData)
+
+def productDetails(request, product_id):
+    singleProduct = Product.objects.get(product_id=product_id)
+    singleProductData ={
+        "singleProduct": singleProduct,
+    }
+    return render(request, "product-details.html", singleProductData)
