@@ -102,23 +102,10 @@
                 <h6>MENS WEAR</h6>
             </div>
         </div>
-        <div class="row pb-5 mb-4">
-            <div class="col-lg-12 heading text-center">
-                <div class="carousel-wrap">
-                    <div class="owl-carousel">
-                        {% for product in relatedProduct %}
-                        <div class="item">
-                            <a href="{% url 'productDetails' product.product_id %}">
-                                
-                                <img src="/media/{{product.product_image}}">
-                            </a>
-                        </div>
-                        {% endfor %}
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% include 'related-product.html' %}
+        {% block relatedproduct %}
+        {% endblock relatedproduct %}
+    </div>
 </section>
 
 
