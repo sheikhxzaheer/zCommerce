@@ -14,7 +14,10 @@ def Products(request):
 
 def productDetails(request, product_id):
     singleProduct = Product.objects.get(product_id=product_id)
+    relatedProduct = Product.objects.all()
+
     singleProductData ={
         "singleProduct": singleProduct,
+        "relatedProduct": relatedProduct
     }
     return render(request, "product-details.html", singleProductData)
