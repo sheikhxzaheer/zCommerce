@@ -31,4 +31,19 @@ $(".owl-carousel").owlCarousel({
   }
 });
 
-
+$(document).ready(function() {
+  $('.tab-menu li:first-child').addClass('active');
+  $('.tab-content .tab-pane:first-child').addClass('active');
+  
+  // $('.tab-menu li').removeAttr('href');
+  
+  $('.tab-menu li').click(function() {
+    var tab_id = $(this).index();
+    
+    $('.tab-menu li').removeClass('active');
+    $('.tab-content .tab-pane').removeClass('active');
+    
+    $(this).addClass('active');
+    $('.tab-content .tab-pane').eq(tab_id).addClass('active');
+  });
+});

@@ -202,4 +202,57 @@ footer ul li {
     margin: 8px;
     border-radius: 5px;
 }
+.z-pagi-a.active{
+    background-color: #ff4545;
+}
 /* pagination page */
+
+/* product details */
+.tab-container {
+    margin-bottom: 20px;
+  }
+  .tab-menu {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    height: 32px;
+    width: 100%;
+    display: flex;
+  }
+  .tab-menu li  {
+    float: left;
+    margin: 0;
+    cursor: pointer;
+    padding: 0px 21px;
+    height: 31px;
+    line-height: 31px;
+    color: #ccc;
+    overflow: hidden;
+    position: relative;
+    font-weight: 600;
+  }
+  .tab-menu li:hover{
+    color: #333;
+  }
+  .tab-menu li.active  {
+    background-color: #fff;
+    color: #333;
+    border-bottom: 1px solid #fff;
+    display: block;
+  }
+  .tab-content .tab-pane {
+    display: none;
+    padding: 10px;
+  }
+  .tab-content .active {
+    display: block;
+  }
+  .tab-pane h6{
+    font-weight: 600;
+  }
+  .tab-pane h6 span{
+    font-weight: 400;
+  }
+  
+/* product details */

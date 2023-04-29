@@ -53,7 +53,40 @@
                         FAVOURITE
                     </button>
                 </div>
- 
+                <div class="tab-container mt-5">
+                    <ul class="tab-menu">
+                        <li class="active">Tab 1</li>
+                        <li>Tab 2</li>
+                        <li>Tab 3</li>
+                    </ul>
+                    <div class="pt-5 px-2">
+                        <div class="tab-content">
+                            <div class="tab-pane active">
+                                <h3>Hello</h3>
+                                <p>{{singleProduct.product_description | safe}}</p>
+                            </div>
+                            <div class="tab-pane">
+                                <h3>Hello</h3>
+                                <div class="">
+                                    <h6>Color: <span>Blue, Purple</span></h6>
+                                    <h6>Size: <span>150x100x100</span></h6>
+                                    <h6>Weight: <span> 0.6kg</span></h6>
+                                    <h6>Avilability: <span>In Stock</span></h6>
+                                    <h6>Manifacturer: <span>Manifacturer</span></h6>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane">
+                                <h3>Hello</h3>
+                                <div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio facere cupiditate. Nisi, quidem animi fugiat quibusdam enim molestias asperiores accusantium rerum totam nostrum error praesentium fugit numquam sequi explicabo.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -79,7 +112,7 @@
                         <div class="item"><img src="{% static 'images/nike-4.webp' %}"></div>
                         <div class="item"><img src="{% static 'images/nike-5.webp' %}"></div>
                         <div class="item"><img src="{% static 'images/nike-7.webp' %}"></div>
-                        
+
                     </div>
                 </div>
             </div>
