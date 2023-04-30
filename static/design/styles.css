@@ -256,3 +256,24 @@ footer ul li {
   }
   
 /* product details */
+
+/* cart page */
+.cart-table tbody td {
+    max-width: 250px;
+    min-width: 100px;
+    padding: 20px;
+}
+.cart-img-container-td {
+    width: 120px;
+}
+.cart-img-container-td {
+    width: 120px;
+}
+.cart-quantity-container {
+    padding: 10px 10px;
+    width: 100px;
+}
+.total-table tbody tr td {
+    padding: 5px;
+}
+/* cart page */
