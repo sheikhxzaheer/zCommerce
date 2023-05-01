@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.core.paginator import Paginator
+from cart.models import Cart
 # Create your views here.
 def Products(request):
     product_list = Product.objects.all()
@@ -21,3 +22,15 @@ def productDetails(request, product_id):
         "relatedProduct": relatedProduct
     }
     return render(request, "product-details.html", singleProductData)
+
+
+def add_to_cart(request, product_id):
+    product = Product.objects.get(product_id=product_id)
+    cart, created = Cart.objects.get_or_create(
+        user=request.user,
+        product=product,
+    )
+    if not created:
+        cart.quantity += 1
+        cart.save()
+    return redirect('/cart/')

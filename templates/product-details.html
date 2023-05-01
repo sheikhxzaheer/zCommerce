@@ -46,9 +46,12 @@
                     </p>
                 </div>
                 <div class="product-details-button-container d-flex gap-3">
-                    <button class="z-button">
-                        ADD TO CART
-                    </button>
+                    <form method="POST" action="{% url 'add_to_cart' singleProduct.product_id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="z-button">
+                            ADD TO CART
+                        </button>
+                    </form>
                     <button class="z-black-outline-btn px-4">
                         FAVOURITE
                     </button>

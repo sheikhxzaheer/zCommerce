@@ -102,13 +102,4 @@
     </div>
   </div>
 </section>
-<div>
-  {% for item in cart_items %}
-  <tr>
-    <td>{{ item.product.product_title }}</td>
-    <td>{{ item.quantity }}</td>
-    <td>{{ item.product.product_price }}</td>
-  </tr>
-  {% endfor %}
-</div>
 {% endblock content %}
