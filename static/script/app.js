@@ -47,3 +47,9 @@ $(document).ready(function() {
     $('.tab-content .tab-pane').eq(tab_id).addClass('active');
   });
 });
+
+var addId = "[id^='add_']";
+$(addId).click(function () {
+  var buttonId = $(this).attr("id");
+  console.log(buttonId);
+});
