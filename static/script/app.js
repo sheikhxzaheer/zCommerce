@@ -51,5 +51,20 @@ $(document).ready(function() {
 var addId = "[id^='add_']";
 $(addId).click(function () {
   var buttonId = $(this).attr("id");
-  console.log(buttonId);
+  var testDivId = "#testdiv_" + buttonId;
+  $.ajax({
+      url: 'http://127.0.0.1:8000/cart/addcart/' + buttonId,
+      type: 'GET',
+      success: function (response) {
+        $(testDivId).html(`<li>${response.cart}</li>`);
+      }
+     })
 });
+
+
+// $(document).ready(function(){ 
+//   $("[id^='addbtn_']").click(function () {
+//     var cartId = $(this).data("cart-id");
+//     var testDivId = "#testdiv_" + cartId;
+//   });
+// });

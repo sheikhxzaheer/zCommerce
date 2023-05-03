@@ -4,8 +4,8 @@ from django.core.paginator import Paginator
 from cart.models import Cart
 # Create your views here.
 def Products(request):
-    product_list = Product.objects.all()
-    paginator = Paginator(product_list, 3)
+    product_list = Product.objects.all().order_by('?')
+    paginator = Paginator(product_list, 8)
     page_number = request.GET.get('page')
     products = paginator.get_page(page_number)
     productData = {

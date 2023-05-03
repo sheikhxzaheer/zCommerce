@@ -39,12 +39,13 @@
                 <h5>{{ item.product.product_title }}</h5>
               </td>
               <td>
-                <a href="{% url 'addCart' item.id %}">hello</a>
                 <h5>${{ item.product.product_price}}</h5>
               </td>
               <td>
-                <button id="add_{{item.product.product_id}}">+</button>
+                {% comment %} <button id="add_{{item.product.product_id}}">+</button> {% endcomment %}
+                <a href="{% url 'addCart' item.id %}">hello</a>
                 <h5 id="quantity">{{ item.quantity }}</h5>
+                <a href="{% url 'minusCart' item.id %}">hello</a>
               </td>
               <td>
                 <h5>${{ item.total_price }} </h5>
