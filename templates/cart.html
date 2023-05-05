@@ -41,10 +41,15 @@
               <td>
                 <h5>${{ item.product.product_price}}</h5>
               </td>
-              <td>
-                <button id="add_{{item.product.product_id}}" data-cart-id="{{item.id}}">+</button>
-                <h5 id="testdiv_{{item.id}}">{{ item.quantity }}</h5>
-                <button id="minus_{{item.product.product_id}}" data-cart-id="{{item.id}}">-</button>
+              <td class="p-0">
+
+                <div class="z-center justify-content-start">
+                  <a href="{% url 'addCart' item.id %}">hello</a>
+                  <button id="minus_{{item.product.product_id}}" data-cart-id="{{item.id}}" class="z-pagi-a">-</button>
+                  <h5 id="testdiv_{{item.id}}" class="m-0 quantity">{{ item.quantity }}</h5>
+                  <button id="add_{{item.product.product_id}}" data-cart-id="{{item.id}}" class="z-pagi-a">+</button>
+                </div>
+                
               </td>
               <td>
                 <h5>${{ item.total_price }} </h5>

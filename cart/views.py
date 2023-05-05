@@ -10,9 +10,16 @@ def cart(request):
 
 def addToCart(request, cart_id):
     cart = get_object_or_404(Cart, id=cart_id)
+    product = cart.product
     cart.quantity += 1
     cart.save()
-    return JsonResponse({"cart": cart.quantity})
+    cartData = {
+        "cart": cart.quantity,
+        'product': {
+            'price': product.product_price,
+        }
+    }
+    return JsonResponse(cartData)
 
 def minusFromCart(request, cart_id):
     cart = get_object_or_404(Cart, id=cart_id)
