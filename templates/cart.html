@@ -43,8 +43,8 @@
               </td>
               <td>
                 <button id="add_{{item.product.product_id}}" data-cart-id="{{item.id}}">+</button>
-                <h5 id="quantity">{{ item.quantity }}</h5>
-                <a href="{% url 'minusCart' item.id %}">hello</a>
+                <h5 id="testdiv_{{item.id}}">{{ item.quantity }}</h5>
+                <button id="minus_{{item.product.product_id}}" data-cart-id="{{item.id}}">-</button>
               </td>
               <td>
                 <h5>${{ item.total_price }} </h5>

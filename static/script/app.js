@@ -50,9 +50,8 @@ $(document).ready(function() {
 
 var addId = "[id^='add_']";
 $(addId).click(function () {
-  var buttonId = $(this).attr("id");
   var cartId = $(this).data("cart-id");
-  var testDivId = "#testdiv_" + buttonId;
+  var testDivId = "#testdiv_" + cartId;
   $.ajax({
       url: 'http://127.0.0.1:8000/cart/addcart/' + cartId,
       type: 'GET',
@@ -62,10 +61,16 @@ $(addId).click(function () {
      })
 });
 
+var minusId = "[id^='minus_']";
+$(minusId).click(function () {
+  var cartId = $(this).data("cart-id");
+  var testDivId = "#testdiv_" + cartId;
+  $.ajax({
+      url: 'http://127.0.0.1:8000/cart/minuscart/' + cartId,
+      type: 'GET',
+      success: function (response) {
+        $(testDivId).html(`<li>${response.cart}</li>`);
+      }
+     })
+});
 
-// $(document).ready(function(){ 
-//   $("[id^='addbtn_']").click(function () {
-//     var cartId = $(this).data("cart-id");
-//     var testDivId = "#testdiv_" + cartId;
-//   });
-// });
