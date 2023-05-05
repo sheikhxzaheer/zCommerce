@@ -42,8 +42,7 @@
                 <h5>${{ item.product.product_price}}</h5>
               </td>
               <td>
-                {% comment %} <button id="add_{{item.product.product_id}}">+</button> {% endcomment %}
-                <a href="{% url 'addCart' item.id %}">hello</a>
+                <button id="add_{{item.product.product_id}}" data-cart-id="{{item.id}}">+</button>
                 <h5 id="quantity">{{ item.quantity }}</h5>
                 <a href="{% url 'minusCart' item.id %}">hello</a>
               </td>

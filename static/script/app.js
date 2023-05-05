@@ -51,9 +51,10 @@ $(document).ready(function() {
 var addId = "[id^='add_']";
 $(addId).click(function () {
   var buttonId = $(this).attr("id");
+  var cartId = $(this).data("cart-id");
   var testDivId = "#testdiv_" + buttonId;
   $.ajax({
-      url: 'http://127.0.0.1:8000/cart/addcart/' + buttonId,
+      url: 'http://127.0.0.1:8000/cart/addcart/' + cartId,
       type: 'GET',
       success: function (response) {
         $(testDivId).html(`<li>${response.cart}</li>`);
