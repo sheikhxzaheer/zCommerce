@@ -28,7 +28,7 @@
           </thead>
           <tbody>
             {% for item in cart_items %}
-            <tr>
+            <tr data-z-cart-id="{{item.id}}">
               <td class="cart-img-container-td">
                 <div class="cart-img-container">
                   <img src="/media/{{ item.product.product_image}}" alt="">

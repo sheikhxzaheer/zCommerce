@@ -90,3 +90,8 @@ $(minusId).click(function () {
     }
   })
 });
+
+$(".cart-delete-button").click(function () {
+  var cartId = $(this).closest('tr').data("z-cart-id");
+  console.log(cartId)
+});
