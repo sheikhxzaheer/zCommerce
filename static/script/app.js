@@ -53,6 +53,7 @@ $(addId).click(function () {
   var cartId = $(this).data("cart-id");
   var testDivId = "#testdiv_" + cartId;
   var productAmount = "#cart-price-" + cartId
+  var subTotal = $(".subtotal")
   
   $.ajax({
     url: 'http://127.0.0.1:8000/cart/addcart/' + cartId,
@@ -60,9 +61,11 @@ $(addId).click(function () {
     success: function (response) {
       var quantity = response.cart;
       var price = response.product.price;
+      var subtotal = response.subtotal
       $(testDivId).html(`<li>${quantity}</li>`);
       var amount = quantity * price;
       $(productAmount).html(`$${amount}`);
+      $(subTotal).html(`$${subtotal}`);
     }
   })
 });
@@ -72,15 +75,18 @@ $(minusId).click(function () {
   var cartId = $(this).data("cart-id");
   var testDivId = "#testdiv_" + cartId;
   var productAmount = "#cart-price-" + cartId
+  var subTotal = $(".subtotal")
   $.ajax({
     url: 'http://127.0.0.1:8000/cart/minuscart/' + cartId,
     type: 'GET',
     success: function (response) {
       var quantity = response.cart;
       var price = response.product.price;
+      var subtotal = response.subtotal
       $(testDivId).html(`<li>${quantity}</li>`);
       var amount = quantity * price;
       $(productAmount).html(`$${amount}`);
+      $(subTotal).html(`$${subtotal}`);
     }
   })
 });

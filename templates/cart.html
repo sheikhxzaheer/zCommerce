@@ -22,7 +22,7 @@
             <td>Product</td>
             <td>Price</td>
             <td>Quantity</td>
-            <td>Subtotal</td>
+            <td>Amount</td>
             <td>&nbsp;</td>
 
           </thead>
@@ -44,7 +44,7 @@
               <td class="p-0">
 
                 <div class="z-center justify-content-start">
-                  <a href="{% url 'addCart' item.id %}">hello</a>
+                  {% comment %} <a href="{% url 'addCart' item.id %}">hello</a> {% endcomment %}
                   <button id="minus_{{item.product.product_id}}" data-cart-id="{{item.id}}" class="z-pagi-a">-</button>
                   <h5 id="testdiv_{{item.id}}" class="m-0 quantity">{{ item.quantity }}</h5>
                   <button id="add_{{item.product.product_id}}" data-cart-id="{{item.id}}" class="z-pagi-a">+</button>
@@ -77,22 +77,22 @@
               <tbody>
                 <tr>
                   <td>Subtotal</td>
-                  <td>$240.00</td>
+                  <td class="subtotal">${{subtotal}}</td>
                 </tr>
                 <tr>
                   <td>Shipping</td>
-                  <td>$7.00</td>
+                  <td>$0.00</td>
                 </tr>
                 <tr>
                   <td>State Tax</td>
-                  <td>$2.00</td>
+                  <td>$0.00</td>
                 </tr>
                 <tr>
                   <td class="cart-total">
                     <h4>TOTAL</h4>
                   </td>
                   <td>
-                    <h4>$550</h4>
+                    <h4 class="subtotal">${{subtotal}}</h4>
                   </td>
                 </tr>
               </tbody>
