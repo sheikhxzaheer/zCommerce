@@ -288,3 +288,20 @@ footer ul li {
     justify-content: center;
 }
 /* cart page */
+
+
+/* login page */
+.colored-section {
+    background-color: #e5e5e5;
+}
+.login-form {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+    border-radius: 8px;
+}
+.login-form h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+/* loginpage */

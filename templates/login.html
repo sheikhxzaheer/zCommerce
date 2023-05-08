@@ -1,4 +1,38 @@
+{% extends 'base.html' %}
 {% load socialaccount %}
+
+{% load static %}
+
+
+{% block content %}
+<section class="colored-section position-relative overflow-hidden">
+    <div class="container">
+        <div class="row py-5 z-center">
+            <div class="position-absolute">
+                <img src="/static/images/login.gif" class="w-50" alt="">
+            </div>
+            <div class="col-lg-5 ">
+                <div class="login-form py-5 px-5 text-center">
+                    
+                    <div>
+                        <h3>Login</h3>
+                        <h5>Hello, Please enter your details to get sign in
+                            to your account</h5>
+                    </div>
+
+                    <form action="">
+                        
+                    </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
 
 <h1>Django Allauth Tutorial</h1>
 {% if user.is_authenticated %}
@@ -7,3 +41,9 @@
 {% else %}
 <a href="{% provider_login_url 'google' %}">Sign Up</a>
 {% endif %}
+
+{% endblock content %}
+
+
+
+
