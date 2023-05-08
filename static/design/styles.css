@@ -62,12 +62,10 @@ ul {
     position: absolute;
     bottom: -20%;
     color: #cdcbcd;
-    
 }
 .owl-nav i {
     font-size: 20px;
     color: #0a0a0a;
-
 }
 .owl-nav .owl-prev {
     right: 10%;
@@ -157,10 +155,10 @@ ul {
     font-size: 35px;
     font-family: 'Bebas Neue', cursive;
 }
-.product-price-offer{
+.product-price-offer {
     color: #ff4545;
 }
-.offer-price{
+.offer-price {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -183,9 +181,8 @@ footer ul li {
     font-size: 14px;
 }
 /* footer end  */
-
 /* pagination page */
-.step-links{
+.step-links {
     display: flex;
 }
 .z-pagi-a {
@@ -202,16 +199,15 @@ footer ul li {
     margin: 8px;
     border-radius: 5px;
 }
-.z-pagi-a.active{
+.z-pagi-a.active {
     background-color: #ff4545;
 }
 /* pagination page */
-
 /* product details */
 .tab-container {
     margin-bottom: 20px;
-  }
-  .tab-menu {
+}
+.tab-menu {
     margin: 0;
     padding: 0;
     float: left;
@@ -219,8 +215,8 @@ footer ul li {
     height: 32px;
     width: 100%;
     display: flex;
-  }
-  .tab-menu li  {
+}
+.tab-menu li {
     float: left;
     margin: 0;
     cursor: pointer;
@@ -231,32 +227,30 @@ footer ul li {
     overflow: hidden;
     position: relative;
     font-weight: 600;
-  }
-  .tab-menu li:hover{
+}
+.tab-menu li:hover {
     color: #333;
-  }
-  .tab-menu li.active  {
+}
+.tab-menu li.active {
     background-color: #fff;
     color: #333;
     border-bottom: 1px solid #fff;
     display: block;
-  }
-  .tab-content .tab-pane {
+}
+.tab-content .tab-pane {
     display: none;
     padding: 10px;
-  }
-  .tab-content .active {
+}
+.tab-content .active {
     display: block;
-  }
-  .tab-pane h6{
+}
+.tab-pane h6 {
     font-weight: 600;
-  }
-  .tab-pane h6 span{
+}
+.tab-pane h6 span {
     font-weight: 400;
-  }
-  
+}
 /* product details */
-
 /* cart page */
 .cart-table tbody td {
     max-width: 250px;
@@ -276,20 +270,18 @@ footer ul li {
 .total-table tbody tr td {
     padding: 5px;
 }
-.cart-table thead td{
+.cart-table thead td {
     padding: 20px;
     font-weight: 600;
     font-size: 20px;
 }
-.quantity{
+.quantity {
     min-width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 /* cart page */
-
-
 /* login page */
 .colored-section {
     background-color: #e5e5e5;
@@ -304,4 +296,107 @@ footer ul li {
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
 }
+.forgot-password h6 {
+    font-weight: 600;
+}
+.orsignin {
+    position: relative;
+}
+.orsignin h6::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    left: -35px;
+}
+.orsignin h6::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -35px;
+    width: 20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.login-with-google-btn {
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 12px 16px 12px 20px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    gap: 8px;
+    background-color: white;
+}
+.login-with-google-btn img {
+    width: 20px;
+}
 /* loginpage */
+/* google input */
+.form {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-wrapper {
+    /* max-width: 360px; */
+    width: 100%;
+    position: relative;
+}
+.input {
+    height: 50px;
+    font-size: 16px;
+    padding: 11px 15px;
+    border-radius: 4px;
+    border: 2px solid #CBD8E3;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+}
+.placeholder {
+    pointer-events: none;
+    position: absolute;
+    font-weight: 400;
+    top: 14px;
+    left: 8px;
+    padding: 0 8px;
+    background-color: white;
+    border-radius: 5px;
+    opacity: 1 !important;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: grey;
+}
+.input:not(:placeholder-shown).input:not(:focus)+.placeholder {
+    transform: scale(.75) translateY(-36px) translateX(-15%);
+    color: #CBD8E3;
+    transition: .2s ease;
+}
+.input:focus {
+    border-color: #0088ff;
+}
+.input:focus+.placeholder {
+    transform: scale(.75) translateY(-36px) translateX(-15%);
+    color: #0088ff;
+    transition: .2s ease;
+}
+.input:invalid:not(:placeholder-shown) {
+    transition: .2s ease;
+    border-color: #F52C5C;
+}
+.input:invalid:not(:placeholder-shown)+.placeholder {
+    transition: .2s ease;
+    color: #F52C5C;
+}
+.input:invalid:not(:placeholder-shown).input:not(:focus)+.placeholder {
+    transform: scale(.75) translateY(-36px) translateX(-15%);
+    color: #F52C5C;
+    transition: .2s ease;
+}
+/* google input */
