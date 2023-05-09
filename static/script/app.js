@@ -95,3 +95,17 @@ $(".cart-delete-button").click(function () {
   var cartId = $(this).closest('tr').data("z-cart-id");
   console.log(cartId)
 });
+
+
+const passwordInput = document.getElementById("login-password");
+const showHideButton = document.getElementById("show-hide-password");
+
+showHideButton.addEventListener("click", function() {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    showHideButton.innerHTML = "<i class='fa-regular fa-eye'></i>";
+  } else {
+    passwordInput.type = "password";
+    showHideButton.innerHTML = "<i class='fa-regular fa-eye-slash'></i>";
+  }
+});

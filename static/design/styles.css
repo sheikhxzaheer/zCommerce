@@ -104,6 +104,22 @@ ul {
 .navigation ul li {
     padding: 10px 20px;
 }
+.z-cart-quantity-nav {
+    background-color: #ff4545;
+    min-width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -8px;
+    top: -5px;
+    padding: 2px;
+}
+.z-cart-quantity-nav h6 {
+    margin: 0 !important;
+    font-size: 10px;
+}
 /* navbar end */
 /* home start */
 .home {
@@ -363,8 +379,8 @@ footer ul li {
 .placeholder {
     pointer-events: none;
     position: absolute;
-    font-weight: 400;
-    top: 14px;
+    font-weight: 500;
+    top: 13px;
     left: 8px;
     padding: 0 8px;
     background-color: white;
@@ -375,28 +391,39 @@ footer ul li {
 }
 .input:not(:placeholder-shown).input:not(:focus)+.placeholder {
     transform: scale(.75) translateY(-36px) translateX(-15%);
-    color: #CBD8E3;
+    color: #252525;
     transition: .2s ease;
 }
 .input:focus {
-    border-color: #0088ff;
+    border-color: #252525;
 }
 .input:focus+.placeholder {
     transform: scale(.75) translateY(-36px) translateX(-15%);
-    color: #0088ff;
+    color: #252525;
+    font-weight: 600;
     transition: .2s ease;
 }
 .input:invalid:not(:placeholder-shown) {
-    transition: .2s ease;
-    border-color: #F52C5C;
+    transition: 0.2s ease;
+    border-color: #252525;
 }
 .input:invalid:not(:placeholder-shown)+.placeholder {
-    transition: .2s ease;
-    color: #F52C5C;
+    transition: 0.2s ease;
+    color: #ff4545;
 }
 .input:invalid:not(:placeholder-shown).input:not(:focus)+.placeholder {
     transform: scale(.75) translateY(-36px) translateX(-15%);
-    color: #F52C5C;
-    transition: .2s ease;
+    color: #252525;
+    transition: 0.2s ease;
+}
+#show-hide-password i {
+    font-size: 13px;
+}
+#show-hide-password {
+    position: absolute;
+    right: 10px;
+    top: 26%;
+    border: none;
+    background-color: transparent;
 }
 /* google input */

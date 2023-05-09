@@ -13,23 +13,25 @@
             </div>
             <div class="col-lg-5 ">
                 <div class="login-form py-5 px-5 text-center">
-
                     <div>
                         <h3>Login</h3>
                         <h5>Hello, Please enter your details to get sign in
                             to your account</h5>
                     </div>
-
                     <div class="position-relative">
                         <form class="form" method="post">
                             {% csrf_token %}
                             <div class="input-wrapper mt-3">
-                              <input class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="username" type="text" placeholder=" " data-placeholder="E-mail" required>
-                              <span class="placeholder">Username</span>
+                                <input class="input" name="username" type="text" placeholder=" " id="logininput"
+                                    data-placeholder="username" required>
+                                <span class="placeholder">Username</span>
                             </div>
                             <div class="input-wrapper mt-4 mb-3">
-                              <input class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="password" type="text" placeholder=" " data-placeholder="E-mail" required>
-                              <span class="placeholder">E-mail</span>
+                                <input class="input" name="password" type="password" placeholder=" " id="login-password"
+                                    data-placeholder="password" required>
+                                <span class="placeholder">Password</span>
+                                <button type="button" id="show-hide-password"><i
+                                        class="fa-regular fa-eye-slash"></i></button>
                             </div>
                             <div class="forgot-password w-100">
                                 <h6 class="text-start ps-1 mb-4 mt-2">
@@ -48,11 +50,13 @@
                                     </a>
                                 </h6>
                             </div>
-                            <button type="button" class="login-with-google-btn ">
-                                <img src="/static/images/google-logo.png" alt="">
-                                Sign in with Google
-                            </button>
-                          </form>
+                            <div>
+                                <a href="{% provider_login_url 'google' %}" class="login-with-google-btn">
+                                    <img src="/static/images/google-logo.png" alt="">
+                                    Sign in with Google
+                                </a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

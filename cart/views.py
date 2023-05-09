@@ -1,7 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import *
 from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
 # Create your views here.
+
+@login_required(login_url= '/login/')
 def cart(request):
     subtotal = 0 
     cart_items = Cart.objects.filter(user=request.user)

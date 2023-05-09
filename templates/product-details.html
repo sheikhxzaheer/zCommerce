@@ -36,9 +36,19 @@
             <div class="col-lg-7 py-5 px-5">
                 <div class="product-details-content ">
                     <h2 class="fw-semibold">{{singleProduct.product_title}}</h2>
-                    <h2 class="price">
-                        {{singleProduct.product_price}}
-                    </h2>
+                    <div class="d-flex gap-4 prod-content-container">
+                        {% if singleProduct.product_offer_price > 0 %}
+                        <div class="offer-price">
+                            <h2>${{singleProduct.product_offer_price}}</h2>
+                            <h4> ${{ singleProduct.product_price }}</h4>
+
+                        </div>
+
+                        {% else %}
+                        <h2> ${{ singleProduct.product_price }}</h2>
+                        {% endif%}
+
+                    </div>
                     <h6>Avilability: <span>In Stock</span></h6>
                 </div>
                 <div class="product-details-desc py-4">

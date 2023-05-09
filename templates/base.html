@@ -36,8 +36,33 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 z-extra-nav-content">
-                    hello
+                <div class="col-lg-3 z-extra-nav-content z-center gap-5">
+                    {% if user.is_authenticated %}
+                    <div class="nav-cart-container position-relative">
+                        <a href="/cart">
+                            <div class="position-absolute z-cart-quantity-nav">
+                                <h6>
+                                  {{ request.user.cart_set.all | length}}
+                                </h6>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                    <div class="nav-logout-container">
+                        <a href="{% url 'logoutPage' %}"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                    </div>
+                    {% else %}
+                    <div>
+                        <a href="/reg" class="mx-2 px-3 py-2 z-nav-signup-btn">
+                            Sign in
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/auth/login" class="mx-2 px-3 py-2 z-white-btn border-none">
+                            Log in
+                        </a>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
