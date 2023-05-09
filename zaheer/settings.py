@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'home',
     'product',
     'cart',
+    'accounts',
+    'contact',
     'tinymce',
     'allauth',
     'allauth.account',

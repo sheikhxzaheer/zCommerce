@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="heading row">
+            <div class="col-lg-12 z-center-down position-relative py-5">
+                <h2 class="heading-back"></h2>
+                <h2>CONTACT US</h2>
+                <h6></h6>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-lg-6 p-3">
+                <div class="contact-form">
+                    <h3 class="">Leave A Comment</h3>
+                    <form action="#" class="z-center-down gap-4" method="POST">
+                        {% csrf_token %}
+                        <div class="auth-form-z mt-5">
+                            <div class="input-wrapper">
+                                <input class="input" name="username" type="text" placeholder=" ">
+                                <span class="placeholder">Name</span>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="input"  type="text" placeholder=" ">
+                                <span class="placeholder">Phone</span>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="input" type="text" placeholder=" ">
+                                <span class="placeholder">Email</span>
+                            </div>
+                            <div class="input-wrapper">
+                                <input class="input" type="text" placeholder=" ">
+                                <span class="placeholder">Subject</span>
+                            </div>
+                        </div>
+                        <div class="submit-login mt-3">
+                            <input type="submit" class="z-button px-5">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 p-3">
+                <div>
+                    <h3 class="mb-4">Information About Elsey Store</h3>
+                    <p>Efficiently unleash cross-media information without cross-media value. Quickly maximize timely
+                        deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without
+                        functional solutions.</p>
+                    <p>Completely synergize resource taxing relationships via premier niche markets. Professionally
+                        cultivate one-to-one customer service with robust ideas.</p>
+                    <div class="row">
+                        <div class="col-lg-6 contact-page-location">
+                            <h5>Melbourne Store</h5>
+                            <h6>44 New Design Street,
+                                Melbourne 005, Australia</h6>
+                            <h6>T: +1 (800) 433 544</h6>
+                            <h6>E: elsey@victorthemes.com</h6>
+                        </div>
+                        <div class="col-lg-6 contact-page-location">
+                            <h5>Melbourne Store</h5>
+                            <h6>44 New Design Street,
+                                Melbourne 005, Australia</h6>
+                            <h6>T: +1 (800) 433 544</h6>
+                            <h6>E: elsey@victorthemes.com</h6>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
