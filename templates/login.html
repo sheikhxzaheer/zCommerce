@@ -13,19 +13,50 @@
             </div>
             <div class="col-lg-5 ">
                 <div class="login-form py-5 px-5 text-center">
-                    
+
                     <div>
                         <h3>Login</h3>
                         <h5>Hello, Please enter your details to get sign in
                             to your account</h5>
                     </div>
 
-                    <form action="">
-                        
-                    </form>
+                    <div class="position-relative">
+                        <form class="form" method="post">
+                            {% csrf_token %}
+                            <div class="input-wrapper mt-3">
+                              <input class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="username" type="text" placeholder=" " data-placeholder="E-mail" required>
+                              <span class="placeholder">Username</span>
+                            </div>
+                            <div class="input-wrapper mt-4 mb-3">
+                              <input class="input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="password" type="text" placeholder=" " data-placeholder="E-mail" required>
+                              <span class="placeholder">E-mail</span>
+                            </div>
+                            <div class="forgot-password w-100">
+                                <h6 class="text-start ps-1 mb-4 mt-2">
+                                    <a href="#">
+                                        Having trouble in sign in?
+                                    </a>
+                                </h6>
+                            </div>
+                            <div class="submit-login mt-3">
+                                <input type="submit" class="z-button px-5">
+                            </div>
+                            <div class="forgot-password orsignin">
+                                <h6 class="my-4">
+                                    <a href="#">
+                                        Or Sign in with
+                                    </a>
+                                </h6>
+                            </div>
+                            <button type="button" class="login-with-google-btn ">
+                                <img src="/static/images/google-logo.png" alt="">
+                                Sign in with Google
+                            </button>
+                          </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 </section>
 
 
@@ -34,16 +65,12 @@
 
 
 
-<h1>Django Allauth Tutorial</h1>
+{% comment %} <h1>Django Allauth Tutorial</h1>
 {% if user.is_authenticated %}
 
 <p>Welcome {{ user.username }} !!!</p>
 {% else %}
 <a href="{% provider_login_url 'google' %}">Sign Up</a>
-{% endif %}
+{% endif %} {% endcomment %}
 
 {% endblock content %}
-
-
-
-
