@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
+{% if request.user.cart_set.all %}
 <section>
   <div class="container">
     <div class="heading row">
@@ -109,4 +111,18 @@
     </div>
   </div>
 </section>
+{% else %}
+<section>
+  <div class="container">
+      <div class="row py-5 z-center">
+          <div class="col-lg-5 text-center">
+              <div class="empty-cart">
+                <h2>Your cart is currently empty. </h2>
+                <div class="mt-5"><img src="{% static 'images/emptyCart.png' %}" alt=""></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{% endif %}
 {% endblock content %}

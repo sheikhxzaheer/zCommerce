@@ -14,7 +14,7 @@
             <div class="col-lg-5 ">
                 <div class="login-form py-5 px-5 text-center">
                     <div>
-                        <h3>Login</h3>
+                        <h3>Sign Up</h3>
                         <h5>Hello, Please enter your details to get sign in
                             to your account</h5>
                     </div>
@@ -23,16 +23,26 @@
                             {% csrf_token %}
                             <div class="auth-form-z mt-5">
                                 <div class="input-wrapper">
+                                    <input class="input" type="text" placeholder=" " name="first_name" required>
+                                    <span class="placeholder">First Name</span>
+                                </div>
+                                <div class="input-wrapper">
                                     <input class="input" name="username" type="text" placeholder=" " id="logininput"
                                         data-placeholder="username" required>
                                     <span class="placeholder">Username</span>
                                 </div>
                                 <div class="input-wrapper">
-                                    <input class="input" name="password" type="password" placeholder=" " id="login-password"
-                                        data-placeholder="password" required>
+                                    <input class="input" type="text" placeholder=" " name="email" required>
+                                    <span class="placeholder">Email</span>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" placeholder=" ">
+                                    <span class="placeholder">Phone</span>
+                                </div>
+                                <div class="input-wrapper">
+                                    <input class="input" type="text" placeholder=" " id="login-password" name="password" required>
                                     <span class="placeholder">Password</span>
-                                    <button type="button" id="show-hide-password"><i
-                                            class="fa-regular fa-eye-slash"></i></button>
+                                    <button type="button" id="show-hide-password"><i class="fa-regular fa-eye-slash"></i></button>
                                 </div>
                             </div>
                             <div class="forgot-password w-100">
@@ -58,17 +68,19 @@
                                     Sign in with Google
                                 </a>
                             </div>
+                            <div class="forgot-password">
+                                <h6 class="mt-4">
+                                    <a href="#">
+                                        Already have an account? <span><a href="auth/login">Login</a></span>
+                                    </a>
+                                </h6>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 </section>
-
-
-
-
-
 
 
 {% comment %} <h1>Django Allauth Tutorial</h1>

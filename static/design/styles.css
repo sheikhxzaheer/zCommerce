@@ -427,3 +427,12 @@ footer ul li {
     background-color: transparent;
 }
 /* google input */
+
+/* signup page  */
+.auth-form-z{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+/* signup page  */
