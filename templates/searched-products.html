@@ -1,0 +1,29 @@
+{% load static %}
+{% block searchBlock %}
+{% if searchedproducts %}
+{% for product in searchedproducts %}
+<div class="col">
+    <a href="{% url 'productDetails' product_id=product.product_id %}">
+        <div class="product-prod p-1">
+            <div class="prod-img-container">
+                <img src="/media/{{product.product_image}}" alt="">
+            </div>
+            <div class="prod-content-container py-4">
+                <h5>{{product.product_title}}</h5>
+                <h6>Men's Tennis Shoes</h6>
+                <h6>1 Colour</h6>
+                {% if product.product_offer_price %}
+                <div class="offer-price">
+                    <h2 class="product-price-offer">${{product.product_offer_price}}</h2>
+                    <h4>${{product.product_price}}</h4>
+                </div>
+                {% else %}
+                <h2>${{product.product_price}}</h2>
+                {% endif %}
+            </div>
+        </div>
+    </a>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock searchBlock %}

@@ -4,14 +4,26 @@ from django.core.paginator import Paginator
 from cart.models import Cart
 # Create your views here.
 def Products(request):
-    product_list = Product.objects.all().order_by('?')
-    paginator = Paginator(product_list, 8)
-    page_number = request.GET.get('page')
-    products = paginator.get_page(page_number)
-    productData = {
-       "products": products,
-    }
-    return render(request, "products.html", productData)
+    data={}
+    
+    if request.method == 'POST':
+        searchedKeyword = request.POST.get("product-search-input")
+        searchproducts = Product.objects.filter(product_title__contains=searchedKeyword)
+        data = {
+            "title": "Search Results",
+            "searchedproducts": searchproducts,
+            "searchedKeyword": searchedKeyword,
+        }
+        return render(request, "products.html", data)
+    else:
+        product_list = Product.objects.all().order_by('?')
+        paginator = Paginator(product_list, 8)
+        page_number = request.GET.get('page')
+        products = paginator.get_page(page_number)
+        productData = {
+        "products": products,
+        }
+        return render(request, "products.html", productData)
 
 def productDetails(request, product_id):
     singleProduct = Product.objects.get(product_id=product_id)
