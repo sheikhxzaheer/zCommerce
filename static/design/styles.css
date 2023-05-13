@@ -184,6 +184,46 @@ ul {
     font-family: 'Bebas Neue', cursive;
     text-decoration: line-through;
 }
+.product-search-container {
+    position: relative;
+
+}
+.product-search-container .z-button {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    margin: 0 !important;
+    background: none;
+    border: none;
+}
+.product-search-container .product-search-input {
+    width: 400px;
+    padding: 7px 7px 7px 40px;
+    border-radius: 20px;
+}
+.z-ajax-search-image {
+    width: 20%;
+}
+.z--search-result, .nothing-found-ajax {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    /* background: #fff; */
+}
+#search-results{
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.discover-product-ajax{
+    padding: 20px;
+}
 /* product page */
 /* footer start */
 footer {

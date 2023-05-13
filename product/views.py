@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import *
 from django.core.paginator import Paginator
 from cart.models import Cart
+from django.http import JsonResponse
 # Create your views here.
 def Products(request):
     data={}
@@ -46,3 +47,18 @@ def add_to_cart(request, product_id):
         cart.quantity += 1
         cart.save()
     return redirect('/cart/')
+
+
+
+def search_products(request):
+    query = request.GET.get('query', '')
+    products = Product.objects.filter(product_title__icontains=query)
+    data = {
+        'products': [{
+            'title': p.product_title,
+            'id': p.pk,
+            'price': p.product_price,
+            'image': p.product_image.url if p.product_image else None,
+        } for p in products]
+    }
+    return JsonResponse(data)

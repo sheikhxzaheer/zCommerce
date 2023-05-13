@@ -4,6 +4,8 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
+
+
 $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 10,
@@ -34,8 +36,6 @@ $(".owl-carousel").owlCarousel({
 $(document).ready(function () {
   $('.tab-menu li:first-child').addClass('active');
   $('.tab-content .tab-pane:first-child').addClass('active');
-
-  // $('.tab-menu li').removeAttr('href');
 
   $('.tab-menu li').click(function () {
     var tab_id = $(this).index();
@@ -97,15 +97,54 @@ $(".cart-delete-button").click(function () {
 });
 
 
-const passwordInput = document.getElementById("login-password");
-const showHideButton = document.getElementById("show-hide-password");
+const passwordInput = $("#login-password");
+const showHideButton = $("#show-hide-password");
 
-showHideButton.addEventListener("click", function() {
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    showHideButton.innerHTML = "<i class='fa-regular fa-eye'></i>";
+showHideButton.on("click", function() {
+  if (passwordInput.attr("type") === "password") {
+    passwordInput.attr("type", "text");
+    showHideButton.html("<i class='fa-regular fa-eye'></i>");
   } else {
-    passwordInput.type = "password";
-    showHideButton.innerHTML = "<i class='fa-regular fa-eye-slash'></i>";
+    passwordInput.attr("type", "password");
+    showHideButton.html("<i class='fa-regular fa-eye-slash'></i>");
   }
 });
+
+$('#searchbar').on('input', function() {
+  var query = $(this).val();
+
+  var test1DivId = "#search-results"
+  if (query != '') {
+    $.ajax({
+      url: 'http://127.0.0.1:8000/product/searchproducts/',
+      data: { 'query': query },
+      success: function (data) {
+        if (data.products.length > 0) {
+          var productsHtml = data.products.map(function(p) {
+            return `
+            <a href="http://127.0.0.1:8000/product/product-details/${p.id}">
+              <div class="z--search-result" data-aos="fade-up" data-aos-duration="200">
+                  <img class="z-ajax-search-image" src="${p.image}">
+                  <div>${p.title} - ${p.price}</div>
+                </div>
+            </a>
+            `;
+          }).join('');
+        $(test1DivId).html(productsHtml);
+          
+          
+        }
+        else {
+          $("#search-results").html('<div class="nothing-found-ajax">No Product Found</div>');
+        }
+        
+      }
+    });
+  }
+  else {
+    $("#search-results").html('<div class="discover-product-ajax">Discover</div>')
+    $(".z--search-result").addClass("d-none")
+  }
+  
+});
+
