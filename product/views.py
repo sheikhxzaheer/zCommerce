@@ -37,6 +37,7 @@ def productDetails(request, product_id):
     return render(request, "product-details.html", singleProductData)
 
 
+
 def add_to_cart(request, product_id):
     product = Product.objects.get(product_id=product_id)
     cart, created = Cart.objects.get_or_create(
