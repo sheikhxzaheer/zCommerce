@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-dmm9bhzrvh3cumncqc$vhi49fa&^!f$(v3@#-hvb+-&&l5tsiu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+# ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -101,6 +102,16 @@ WSGI_APPLICATION = 'zaheer.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ZaheerDB',
+        'USER': 'postgres',
+        'PASSWORD': 'sheikhzaheer1',
+        'HOST': 'localhost',
+        'PORT': '5432',  
+    }
+}
 
 
 # Password validation
