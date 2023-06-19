@@ -102,16 +102,16 @@ WSGI_APPLICATION = 'zaheer.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'ZaheerDB',
-#         'USER': 'postgres',
-#         'PASSWORD': 'sheikhzaheer1',
-#         'HOST': 'localhost',
-#         'PORT': '5432',  
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ZaheerDB',
+        'USER': 'postgres',
+        'PASSWORD': 'sheikhzaheer1',
+        'HOST': 'localhost',
+        'PORT': '5432',  
+    }
+}
 
 
 # Password validation
