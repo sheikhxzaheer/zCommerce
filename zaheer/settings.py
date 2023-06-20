@@ -109,7 +109,7 @@ DATABASES = {
         'USER': 'default',
         'PASSWORD': 'zU0cw2lGpNBA',
         'HOST': 'ep-steep-glade-805441-pooler.ap-southeast-1.postgres.vercel-storage.com',
-        'PORT': '5432',
+        'PORT': '',
         # 'OPTIONS': {
         #     'sslmode': 'require',
         # },
