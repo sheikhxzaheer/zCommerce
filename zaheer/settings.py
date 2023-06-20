@@ -105,16 +105,25 @@ WSGI_APPLICATION = 'zaheer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'verceldb',
-        'USER': 'default',
-        'PASSWORD': 'zU0cw2lGpNBA',
-        'HOST': 'ep-steep-glade-805441-pooler.ap-southeast-1.postgres.vercel-storage.com',
-        'PORT': '',
-        # 'OPTIONS': {
-        #     'sslmode': 'require',
-        # },
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'ga3qDp5djjTMNjvXzagn',
+        'HOST': 'containers-us-west-155.railway.app',
+        'PORT': '7179',
+        
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'verceldb',
+#         'USER': 'default',
+#         'PASSWORD': 'zU0cw2lGpNBA',
+#         'HOST': 'ep-steep-glade-805441-pooler.ap-southeast-1.postgres.vercel-storage.com',
+#         'PORT': '',
+        
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
