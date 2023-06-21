@@ -58,13 +58,13 @@
                 <div class="product-details-button-container d-flex gap-3">
                     <form method="POST" action="{% url 'add_to_cart' singleProduct.product_id %}">
                         {% csrf_token %}
-                        <button type="submit" class="z-button">
-                            ADD TO CART
-                        </button>
+                        <div class="d-flex">
+                            <a href="#" class="z-button">Add To Cart</a>
+                        </div>
                     </form>
-                    <button class="z-black-outline-btn px-4">
-                        FAVOURITE
-                    </button>
+                    <div class="d-flex">
+                        <a href="#" class="z-button-outline">Favourite</a>
+                    </div>
                 </div>
                 <div class="tab-container mt-5">
                     <ul class="tab-menu">

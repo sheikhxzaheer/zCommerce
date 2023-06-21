@@ -12,6 +12,9 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
+:root{
+    --main-color: #ff4545;
+}
 .bebas {
     font-family: 'Bebas Neue', cursive;
 }
@@ -73,6 +76,49 @@ ul {
 .owl-nav .owl-next {
     right: 4%;
 }
+/* button */
+.z-button, .z-button-outline {
+    position: relative;
+    display: inline-block;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+.z-button-outline {
+    border: 2px solid var(--main-color);
+    background-color: transparent !important;
+    color: #252525;
+}
+.z-button::before, .z-button-outline::before {
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff8080;
+    z-index: -1;
+    transition: width 0.3s;
+}
+.z-button-outline::before{
+    background-color: #ff4545;
+    
+}
+.z-button:hover, .z-button-outline:hover {
+    transform: translateX(10px);
+    color: #fff !important;
+}
+.z-button:hover::before, .z-button-outline:hover::before {
+    width: 100%;
+    
+}
+/* button */
 /* heading  */
 .heading h2 {
     font-family: 'Bebas Neue', cursive;
