@@ -56,7 +56,7 @@ $(addId).click(function () {
   var subTotal = $(".subtotal")
   
   $.ajax({
-    url: 'http://127.0.0.1:8000/cart/addcart/' + cartId,
+    url: 'http://zade.vercel.app/cart/addcart/' + cartId,
     type: 'GET',
     success: function (response) {
       var quantity = response.cart;
@@ -77,7 +77,7 @@ $(minusId).click(function () {
   var productAmount = "#cart-price-" + cartId
   var subTotal = $(".subtotal")
   $.ajax({
-    url: 'http://127.0.0.1:8000/cart/minuscart/' + cartId,
+    url: 'http://zade.vercel.app/cart/minuscart/' + cartId,
     type: 'GET',
     success: function (response) {
       var quantity = response.cart;
@@ -116,13 +116,13 @@ $('#searchbar').on('input', function() {
   var test1DivId = "#search-results"
   if (query != '') {
     $.ajax({
-      url: 'http://127.0.0.1:8000/product/searchproducts/',
+      url: 'http://zade.vercel.app/product/searchproducts/',
       data: { 'query': query },
       success: function (data) {
         if (data.products.length > 0) {
           var productsHtml = data.products.map(function(p) {
             return `
-            <a href="http://127.0.0.1:8000/product/product-details/${p.id}">
+            <a href="http://zade.vercel.app/product/product-details/${p.id}">
               <div class="z--search-result" data-aos="fade-up" data-aos-duration="200">
                   <img class="z-ajax-search-image" src="${p.image}">
                   <div>${p.title} - ${p.price}</div>
