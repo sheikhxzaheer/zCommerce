@@ -56,7 +56,7 @@ $(addId).click(function () {
   var subTotal = $(".subtotal")
   
   $.ajax({
-    url: 'http://zade.vercel.app/cart/addcart/' + cartId,
+    url: 'https://zade.vercel.app/cart/addcart/' + cartId,
     type: 'GET',
     success: function (response) {
       var quantity = response.cart;
@@ -77,7 +77,7 @@ $(minusId).click(function () {
   var productAmount = "#cart-price-" + cartId
   var subTotal = $(".subtotal")
   $.ajax({
-    url: 'http://zade.vercel.app/cart/minuscart/' + cartId,
+    url: 'https://zade.vercel.app/cart/minuscart/' + cartId,
     type: 'GET',
     success: function (response) {
       var quantity = response.cart;
@@ -116,7 +116,7 @@ $('#searchbar').on('input', function() {
   var test1DivId = "#search-results"
   if (query != '') {
     $.ajax({
-      url: 'http://zade.vercel.app/product/searchproducts/',
+      url: 'https://zade.vercel.app/product/searchproducts/',
       data: { 'query': query },
       success: function (data) {
         if (data.products.length > 0) {
