@@ -26,7 +26,7 @@
                         {% csrf_token %}
                         <div class="product-search-container">
                             <input type="text" placeholder="Search products..." name="product-search-input" id="searchbar"  value="{{searchedKeyword}}" class="product-search-input" >
-                            <button class="z-button my-4" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button class="z-search-button my-4" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </form>
                     <div class="shadow rounded" id="search-results"></div>

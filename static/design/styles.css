@@ -522,3 +522,15 @@ footer ul li {
     width: 100%;
 }
 /* signup page  */
+
+/* chnages making after live */
+
+.z-search-button{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    border: none;
+    margin: 0 !important;
+    background: transparent;
+}
+
