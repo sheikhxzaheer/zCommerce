@@ -25,14 +25,16 @@
                     <form action="/product/" method="post">
                         {% csrf_token %}
                         <div class="product-search-container">
-                            <input type="text" placeholder="Search products..." name="product-search-input" id="searchbar"  value="{{searchedKeyword}}" class="product-search-input" >
-                            <button class="z-search-button my-4" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input type="text" placeholder="Search products..." name="product-search-input"
+                                id="searchbar" value="{{searchedKeyword}}" class="product-search-input">
+                            <button class="z-search-button my-4" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </form>
                     <div class="shadow rounded" id="search-results"></div>
                 </div>
             </div>
-            
+
         </div>
         <div class="row position-relative">
             <div class="col-lg-12">
@@ -45,9 +47,16 @@
                     <div class="col">
                         <a href="{% url 'productDetails' product_id=product.product_id %}">
                             <div class="product-prod p-1">
-                                <div class="prod-img-container">
+                                <div class="prod-img-container position-relative">
                                     <img src="{{product.product_image}}" alt="">
+                                    <div class="actions">
+                                        <a href="" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></a> 
+                                        <a href="" class="icon-btn" ><i class="fa-solid fa-heart"></i></a> 
+                                        <a href="" class="icon-btn popup-content"><i class="fa-solid fa-eye"></i></a> 
+                                        <a href="" class="icon-btn"><i class="fa-solid fa-chart-simple"></i></a>
+                                    </div>
                                 </div>
+
                                 <div class="prod-content-container py-4">
                                     <h5>{{product.product_title}}</h5>
                                     <h6>Men's Tennis Shoes</h6>

@@ -55,11 +55,11 @@
                     <p>{{singleProduct.product_description | safe}}
                     </p>
                 </div>
-                <div class="product-details-button-container d-flex gap-3">
+                <div class="product-details-button-container d-flex align-items-center gap-3">
                     <form method="POST" action="{% url 'add_to_cart' singleProduct.product_id %}">
                         {% csrf_token %}
                         <div class="d-flex">
-                            <a href="#" class="z-button">Add To Cart</a>
+                            <button type="submit"class="z-button" style="border: none;">Add To Cart</button>
                         </div>
                     </form>
                     <div class="d-flex">
