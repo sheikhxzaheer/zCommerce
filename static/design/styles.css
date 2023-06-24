@@ -228,6 +228,9 @@ ul {
     justify-content: flex-start;
     gap: 20px;
 }
+.home-product-content{
+    font-family: 'Bebas Neue', cursive;
+}
 .offer-price h4 {
     font-family: 'Bebas Neue', cursive;
     text-decoration: line-through;

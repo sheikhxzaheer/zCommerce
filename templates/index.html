@@ -68,23 +68,28 @@
                         </span>
                     </div>
                     <div class="owl-carousel home-product">
+                        {% for product in homeProduct %}
                         <div class="item">
                             <div class="product-prod ">
+                                {% if product.product_offer_price %}
                                 <div class="product--badge">
                                     <span class="badge badge--sale-pt"><i class="fa-solid fa-bolt"></i>&nbsp;-9%</span>
                                 </div>
+                                {% endif %}
                                 <div class="">
                                     <div>
-                                        <img src="{% static 'images/nike-1.webp' %}">
+                                        <img src="{{product.product_image}}">
                                         <div class="actions"><a href="/product/product-details/16">
-                                        </a><a href="" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                                        <a href="" class="icon-btn"><i class="fa-solid fa-heart"></i></a>
-                                        <a href="" class="icon-btn popup-content"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="" class="icon-btn"><i class="fa-solid fa-chart-simple"></i></a>
-                                    </div>
+                                            </a><a href="" class="icon-btn"><i
+                                                    class="fa-solid fa-cart-shopping"></i></a>
+                                            <a href="" class="icon-btn"><i class="fa-solid fa-heart"></i></a>
+                                            <a href="" class="icon-btn popup-content"><i
+                                                    class="fa-solid fa-eye"></i></a>
+                                            <a href="" class="icon-btn"><i class="fa-solid fa-chart-simple"></i></a>
+                                        </div>
                                     </div>
                                     <div class="home-product-content z-center-down p-3 gap-3">
-                                        <h6>Lorem ipsum dolor sit.</h6>
+                                        <h6>{{product.product_title}}</h6>
                                         <div class="z-center">
                                             <div>
                                                 <i class="fa-solid fa-star"></i>
@@ -102,15 +107,19 @@
                                                 <i class="fa-solid fa-star-half"></i>
                                             </div>
                                         </div>
+                                        {% if product.product_offer_price %}
                                         <div class="offer-price">
-                                            <h2 class="product-price-offer">$253</h2>
-                                            <h4>$496</h4>
+                                            <h2 class="product-price-offer">${{product.product_offer_price}}</h2>
+                                            <h4>${{product.product_price}}</h4>
                                         </div>
+                                        {% else %}
+                                        <h2>${{product.product_price}}</h2>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -217,23 +226,28 @@
                         </span>
                     </div>
                     <div class="owl-carousel home-product">
+                        {% for product in homeProduct %}
                         <div class="item">
                             <div class="product-prod ">
+                                {% if product.product_offer_price %}
                                 <div class="product--badge">
                                     <span class="badge badge--sale-pt"><i class="fa-solid fa-bolt"></i>&nbsp;-9%</span>
                                 </div>
+                                {% endif %}
                                 <div class="">
                                     <div>
-                                        <img src="{% static 'images/nike-1.webp' %}">
+                                        <img src="{{product.product_image}}">
                                         <div class="actions"><a href="/product/product-details/16">
-                                        </a><a href="" class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                                        <a href="" class="icon-btn"><i class="fa-solid fa-heart"></i></a>
-                                        <a href="" class="icon-btn popup-content"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="" class="icon-btn"><i class="fa-solid fa-chart-simple"></i></a>
-                                    </div>
+                                            </a><a href="" class="icon-btn"><i
+                                                    class="fa-solid fa-cart-shopping"></i></a>
+                                            <a href="" class="icon-btn"><i class="fa-solid fa-heart"></i></a>
+                                            <a href="" class="icon-btn popup-content"><i
+                                                    class="fa-solid fa-eye"></i></a>
+                                            <a href="" class="icon-btn"><i class="fa-solid fa-chart-simple"></i></a>
+                                        </div>
                                     </div>
                                     <div class="home-product-content z-center-down p-3 gap-3">
-                                        <h6>Lorem ipsum dolor sit.</h6>
+                                        <h6>{{product.product_title}}</h6>
                                         <div class="z-center">
                                             <div>
                                                 <i class="fa-solid fa-star"></i>
@@ -251,15 +265,19 @@
                                                 <i class="fa-solid fa-star-half"></i>
                                             </div>
                                         </div>
+                                        {% if product.product_offer_price %}
                                         <div class="offer-price">
-                                            <h2 class="product-price-offer">$253</h2>
-                                            <h4>$496</h4>
+                                            <h2 class="product-price-offer">${{product.product_offer_price}}</h2>
+                                            <h4>${{product.product_price}}</h4>
                                         </div>
+                                        {% else %}
+                                        <h2>${{product.product_price}}</h2>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -323,7 +341,6 @@
         </div>
     </div>
 </section>
-
 
 
 {% endblock content %}
