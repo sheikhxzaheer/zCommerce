@@ -19,16 +19,16 @@
         <div class="row">
             <div class="col-lg-5 ">
                 <div class="product-details-img-container">
-                    <img src="/media/{{singleProduct.product_image}}" alt="">
+                    <img src="{{singleProduct.product_image}}" alt="">
                     <div class="row z-center py-4">
                         <di class="col-lg-2">
-                            <img src="/media/{{singleProduct.product_image}}" alt="">
+                            <img src="{{singleProduct.product_image}}" alt="">
                         </di>
                         <di class="col-lg-2">
-                            <img src="/media/{{singleProduct.product_image}}" alt="">
+                            <img src="{{singleProduct.product_image}}" alt="">
                         </di>
                         <di class="col-lg-2">
-                            <img src="/media/{{singleProduct.product_image}}" alt="">
+                            <img src="{{singleProduct.product_image}}" alt="">
                         </di>
                     </div>
                 </div>
@@ -55,31 +55,29 @@
                     <p>{{singleProduct.product_description | safe}}
                     </p>
                 </div>
-                <div class="product-details-button-container d-flex gap-3">
+                <div class="product-details-button-container d-flex align-items-center gap-3">
                     <form method="POST" action="{% url 'add_to_cart' singleProduct.product_id %}">
                         {% csrf_token %}
-                        <button type="submit" class="z-button">
-                            ADD TO CART
-                        </button>
+                        <div class="d-flex">
+                            <button type="submit"class="z-button" style="border: none;">Add To Cart</button>
+                        </div>
                     </form>
-                    <button class="z-black-outline-btn px-4">
-                        FAVOURITE
-                    </button>
+                    <div class="d-flex">
+                        <a href="#" class="z-button-outline">Favourite</a>
+                    </div>
                 </div>
                 <div class="tab-container mt-5">
                     <ul class="tab-menu">
-                        <li class="active">Tab 1</li>
-                        <li>Tab 2</li>
-                        <li>Tab 3</li>
+                        <li class="active">Description</li>
+                        <li>Specification</li>
+                        <li>Reviews</li>
                     </ul>
                     <div class="pt-5 px-2">
                         <div class="tab-content">
                             <div class="tab-pane active">
-                                <h3>Hello</h3>
                                 <p>{{singleProduct.product_description | safe}}</p>
                             </div>
                             <div class="tab-pane">
-                                <h3>Hello</h3>
                                 <div class="">
                                     <h6>Color: <span>Blue, Purple</span></h6>
                                     <h6>Size: <span>150x100x100</span></h6>
@@ -90,7 +88,6 @@
 
                             </div>
                             <div class="tab-pane">
-                                <h3>Hello</h3>
                                 <div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora optio facere cupiditate. Nisi, quidem animi fugiat quibusdam enim molestias asperiores accusantium rerum totam nostrum error praesentium fugit numquam sequi explicabo.</p>
                                 </div>

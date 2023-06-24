@@ -1,3 +1,4 @@
+from urllib.parse import unquote
 from django.shortcuts import render, redirect
 from .models import *
 from django.core.paginator import Paginator
@@ -59,7 +60,7 @@ def search_products(request):
             'title': p.product_title,
             'id': p.pk,
             'price': p.product_price,
-            'image': p.product_image.url if p.product_image else None,
+            'image': unquote(p.product_image.url)[1:] if p.product_image else None,
         } for p in products]
     }
     return JsonResponse(data)

@@ -12,6 +12,9 @@
 body {
     font-family: 'Quicksand', sans-serif;
 }
+:root{
+    --main-color: #ff4545;
+}
 .bebas {
     font-family: 'Bebas Neue', cursive;
 }
@@ -73,6 +76,49 @@ ul {
 .owl-nav .owl-next {
     right: 4%;
 }
+/* button */
+.z-button, .z-button-outline {
+    position: relative;
+    display: inline-block;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+.z-button-outline {
+    border: 2px solid var(--main-color);
+    background-color: transparent !important;
+    color: #252525;
+}
+.z-button::before, .z-button-outline::before {
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff8080;
+    z-index: -1;
+    transition: width 0.3s;
+}
+.z-button-outline::before{
+    background-color: #ff4545;
+    
+}
+.z-button:hover, .z-button-outline:hover {
+    transform: translateX(10px);
+    color: #fff !important;
+}
+.z-button:hover::before, .z-button-outline:hover::before {
+    width: 100%;
+    
+}
+/* button */
 /* heading  */
 .heading h2 {
     font-family: 'Bebas Neue', cursive;
@@ -157,6 +203,8 @@ ul {
 /* product page */
 .product-prod {
     position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
 }
 .prod-content-container h5 {
     font-size: 18px;
@@ -223,6 +271,57 @@ ul {
 }
 .discover-product-ajax{
     padding: 20px;
+}
+.product-prod .actions {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: center;
+    z-index: 3;
+    transition: all ease 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 36px;
+}
+.product-prod .actions .icon-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    color: #252525;
+    text-align: center;
+    border-radius: 50%;
+    transition: .30s all ease;
+    opacity: 0;
+    transform: translateX(40px);
+}
+.product-prod .actions .icon-btn:hover{
+    background-color: #ff4545;
+    color: #fff;
+}
+.product-prod:hover .actions .icon-btn{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+    
+
+}
+
+.product-prod .actions .icon-btn:nth-child(2){
+    transition-delay: 0s;
+}
+.product-prod .actions .icon-btn:nth-child(3){
+    transition-delay: 0.1s;
+}
+.product-prod .actions .icon-btn:nth-child(4){
+    transition-delay: 0.2s;
+}
+.product-prod .actions .icon-btn:nth-child(5){
+    transition-delay: 0.3s;
 }
 /* product page */
 /* footer start */
@@ -476,3 +575,94 @@ footer ul li {
     width: 100%;
 }
 /* signup page  */
+
+/* chnages making after live */
+
+.z-search-button{
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    border: none;
+    margin: 0 !important;
+    background: transparent;
+}
+.mega-hover2:before{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 3;
+    top: 0;
+    right: 51%;
+    bottom: 0;
+    left: 50%;
+    background: rgb(0 0 0 / 20%);
+    -webkit-transform: skew(45deg);
+    -ms-transform: skew(45deg);
+    transform: skew(45deg);
+}
+.mega-hover2:hover:before {
+    left: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 900ms linear;
+    transition: all 900ms linear;
+}
+
+.home-product-slider{
+    width: calc(100% + 500px) !important;
+    padding-left: 100px;
+  }
+  .title_deals {
+    position: absolute;
+    bottom: 2%;
+    left: -15px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    line-height: 0;
+    text-align: left;
+  }
+   .title_deals .sub_title {
+    font-size: 40px;
+    
+}
+  .title_deals p {
+    margin-top: 0;
+    margin-left: 59px;
+    
+}
+.title_deals .title {
+    font-size: 70px;
+    display: block;
+    
+}
+.home-product .item{
+    position: relative;
+}
+.product--badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+.product--badge .badge--sale-pt {
+    background: #ff4545;
+    display: flex;
+    color: #fff !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+.product-price-offer{
+    font-size: 35px;
+    font-family: 'Bebas Neue', cursive;
+}
