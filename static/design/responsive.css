@@ -1,41 +1,53 @@
-@media only screen and (max-width: 992px) {
 
+@media only screen and (max-width: 1366px) {
+  .floating-card{
+    height: 275px;
+  }
+  .floating-card-content-container h2{
+    font-size: 30px !important;
+  }
+  .floating-card::before{
+    top: -20px;
+    left: -20px;
+  }
+  .floating-card-content-container{
+    bottom: 1px;
+  }
+  .floating-card-button{
+    width: 35px;
+    height: 35px;
+    min-height: 35px;
+    line-height: 35px;
+    margin-bottom: 0.5rem;
+  }
   
 }
-@media (min-width: 1600px) and (max-width: 1500px){
-	
+@media only screen and (max-width: 1280px) {
+  
 }
-
-@media (min-width: 1400px) and (max-width: 1500px){
-	
+@media only screen and (max-width: 1200px) {
+  
 }
-
-@media (min-width: 1300px) and (max-width: 1400px){
-	
+@media only screen and (max-width: 1024px) {
+  
 }
-@media (min-width: 1200px) and (max-width: 1300px){
-	
-}
-
-@media (min-width: 1024px) and (max-width: 1200px){
-	
-}
-
-@media (min-width: 992px) and (max-width: 1024px) {
-	
-}
-
-@media only screen and (max-width: 991.98px) {    
+@media only screen and (max-width: 992px) {
   .owl-nav{
     display: none;
   }
 }
-
-
-@media (max-width: 767.98px){
-    
+@media only screen and (max-width: 991px) {
+  
 }
-
-@media (max-width: 575.98px){
-    
+@media only screen and (max-width: 767px) {
+  
+}
+@media only screen and (max-width: 576px) {
+  
+}
+@media only screen and (max-width: 480px) {
+  
+}
+@media only screen and (max-width: 405px) {
+  
 }
