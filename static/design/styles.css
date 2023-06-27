@@ -721,7 +721,8 @@ footer ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 53px;
+    bottom: 20px;
+    height: 100%;
     right: 36px;
     z-index: 3;
     writing-mode: tb-rl;
