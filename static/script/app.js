@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
 
 
 
-$(".owl-carousel").owlCarousel({
+$(".home-product").owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
@@ -29,6 +29,32 @@ $(".owl-carousel").owlCarousel({
     },
     1000: {
       items: 5
+    }
+  }
+});
+
+$(".bf-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa-solid fa-arrow-left'></i>",
+    "<i class='fa-solid fa-arrow-right'></i>",
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    480: {
+      items: 1
+    },
+    767: {
+      items: 1
+    },
+    1000: {
+      items: 1
     }
   }
 });
