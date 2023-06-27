@@ -803,3 +803,124 @@ footer ul li {
     left: unset !important;
 }
 /* black friday sale */
+
+/* grid-section */
+.block-product{
+    position: relative;
+}
+.block-product .name{
+    top: 2.5rem;
+    left: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+}
+.block-product .price{
+    bottom: 24px;
+    right: 24px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 2;
+}
+.block-product .price i{
+    font-size: 16px;
+}
+.block-product .price a {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+.z-grid-btn-1{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+.z-grid-banner{
+    overflow: hidden;
+    transform: translateZ(0);
+
+}
+.z-grid-banner::after{
+    content: "";
+    display: inline-block;
+    width: 150%;
+    height: 80%;
+    position: absolute;
+    top: -75%;
+    right: 32%;
+    background: rgba(255,255,255,0.15);
+    transform: skewY(-50deg);
+    transition: all 0.35s ease;
+
+}
+
+.z-grid-banner:hover:after {
+    top: 120%;
+    right: -75%;
+    transition: all 0.35s ease;
+}
+/* grid-section */
+
+/* policy term  */
+.policy__item--content {
+    position: relative;
+}
+.policy-icon{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: #ffffff no-repeat center;
+    background-size: cover;
+    margin-bottom: 15px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.policy-icon img{
+    max-width: 90px;
+    max-height: 30px;
+    width: unset;
+}
+.policy-heding h6{
+    max-width: 500px;
+    text-align: center;
+    padding: 0 10px;
+
+}
+.policy__item--content:hover img{
+    animation: policy 1.2s linear;
+}
+@keyframes policy {
+    16.65% {
+        transform: translateX(7px);
+    }
+    33.33% {
+        transform: translateX(-5px);
+    }
+    49.95% {
+        transform: translateX(3px);
+    }
+    66.6% {
+        transform: translateX(-2px);
+    }
+    83.25% {
+        transform: translateX(1px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* policy term  */
