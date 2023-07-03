@@ -793,7 +793,6 @@ footer ul li {
     top: 2.5rem;
     left: 1rem;
     font-size: 1.4rem;
-    font-weight: 600;
     text-transform: uppercase;
     position: absolute;
     z-index: 2;
@@ -953,3 +952,10 @@ footer ul li {
     margin-left: 3rem;
 }
 /* marque section*/
+.remove-carousel-nav .owl-nav{
+    display: none;
+
+}
+.row-gap-footer{
+    row-gap: 20px;
+}

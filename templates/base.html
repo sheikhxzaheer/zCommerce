@@ -20,14 +20,14 @@
     <nav>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-3">
                     <div class="nav-logo-container">
                         <a href="/">
                             <img src="/static/images/logo.svg" alt="">
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 z-center">
+                <div class="col-6 z-center">
                     <div class="navigation">
                         <ul class="z-center m-0 p-0">
                             <li><a href="/">Home</a></li>
@@ -36,7 +36,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 z-extra-nav-content z-center gap-5">
+                <div class="col-3 z-extra-nav-content z-center gap-5">
                     {% if user.is_authenticated %}
                     <div class="nav-cart-container position-relative">
                         <a href="/cart">
@@ -72,8 +72,8 @@
     {% endblock content %}
     <footer>
         <div class="container">
-            <div class="row py-5">
-                <div class="col-lg-3">
+            <div class="row py-5 row-gap-footer">
+                <div class="col-lg-3 col-md-4 col-sm-4">
                     <h3>zCommerce</h3>
                     <ul>
                         <li>
@@ -99,7 +99,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-4">
                     <h3>PRODUCTS</h3>
                     <ul>
                         <li>
@@ -119,7 +119,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-4">
                     <h3>GET HELP</h3>
                     <ul>
                         <li>
@@ -146,7 +146,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-4 col-sm-4">
                     <h3>Follow us</h3>
                     <ul>
                         <li>

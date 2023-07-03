@@ -25,7 +25,7 @@ $(".home-product").owlCarousel({
       items: 2
     },
     767: {
-      items: 3
+      items: 4
     },
     1000: {
       items: 5
@@ -55,6 +55,56 @@ $(".bf-carousel").owlCarousel({
     },
     1000: {
       items: 1
+    }
+  }
+});
+$(".floating-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa-solid fa-chevron-left'></i>",
+    "<i class='fa-solid fa-chevron-right'></i>",
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    480: {
+      items: 1
+    },
+    767: {
+      items: 2
+    },
+    1000: {
+      items: 5
+    }
+  }
+});
+$(".category-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa-solid fa-chevron-left'></i>",
+    "<i class='fa-solid fa-chevron-right'></i>",
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    480: {
+      items: 2
+    },
+    767: {
+      items: 2
+    },
+    1000: {
+      items: 5
     }
   }
 });

@@ -19,7 +19,7 @@
                 <h6>Mens</h6>
             </div>
         </div>
-        <div class="row row-cols-3">
+        <div class="row row-cols-3 d-none d-lg-flex">
             <div class="col">
                 <div class="feature-card z-center-down gap-3">
                     <div>
@@ -45,16 +45,34 @@
                 </div>
             </div>
         </div>
+        <div class="row d-block d-lg-none">
+            <div class="col-lg-12">
+                 <div class="carousel-wrap">
+                    <div class="owl-carousel floating-carousel">
+                        <div class="item">
+                            <div class="col">
+                                <div class="feature-card z-center-down gap-3">
+                                    <div>
+                                        <img src="{% static 'images/feature-3.webp' %}" alt="">
+                                    </div>
+                                    <h2 class="bebas">An Air Max for Everyone</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="black-friday-section mt-5">
-    <div class="container">
+    <div class="container-xl">
         <div class="row py-4">
             <div class="col-lg-12">
                 <div class="carousel-wrap">
                     <div class="owl-carousel bf-carousel ">
                         <div class="item">
-                            <div class="z-center gap-3">
+                            <div class="z-center gap-3 z-custom-flex-jfjawer">
                                 <h4 class="m-0 bebas">Free delivery</h4>
                                 <h6 class="m-0">To First-Time customers only, U.S Customers or Order over $200</h6>
                                 <div class="d-flex">
@@ -63,13 +81,11 @@
                             </div>
                         </div>
                         <div class="item">
-                            <div class="z-center gap-3">
+                            <div class="z-center gap-3 z-custom-flex-jfjawer">
                                 <h4 class="m-0 bebas">Black Friday Deals 2024</h4>
                                 <h6 class="m-0">The biggest sales event of the year is coming up and you don’t want to
                                     miss it. </h6>
-                                <div class="d-flex">
-                                    <a href="#" class="z-button">View More</a>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -80,8 +96,8 @@
 </section>
 <section class="floating-shoes-section mb-5">
     <div class="container-fluid">
-        <div class="row  z-custom-top-padding">
-            <div class="col-lg-4  p-0">
+        <div class="row row-cols-lg-3 row-cols-md-2 z-custom-top-padding d-none d-lg-flex">
+            <div class="col p-0">
                 <div class="floating-card">
                     <div class="floating-card-img-container">
                         <img src="{% static 'images/floating-img-1.png' %}" alt="" title="">
@@ -94,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4  p-0">
+            <div class="col p-0">
                 <div class="floating-card">
                     <div class="floating-card-img-container">
                         <img src="{% static 'images/floating-img-2.png' %}" alt="" title="">
@@ -107,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4  p-0">
+            <div class="col p-0">
                 <div class="floating-card">
                     <div class="floating-card-img-container">
                         <img src="{% static 'images/floating-img-3.png' %}" alt="" title="">
@@ -119,6 +135,29 @@
                         <h2 class="bebas fs-1">CLASSIC SHOES</h2>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row d-block d-lg-none ">
+            <div class="col-lg-12">
+                 <div class="">
+                    <div class="owl-carousel floating-carousel">
+                        <div class="item">
+                            <div class="col p-0">
+                                <div class="floating-card">
+                                    <div class="floating-card-img-container">
+                                        <img src="{% static 'images/floating-img-1.png' %}" alt="" title="">
+                                    </div>
+                                    <div class="floating-card-content-container">
+                                        <div class="d-flex">
+                                            <a href="#" class="floating-card-button"><i class="fa-solid fa-chevron-right"></i></a>
+                                        </div>
+                                        <h2 class="bebas fs-1">RUNNING SHOES</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>
@@ -222,7 +261,7 @@
 </section>
 
 <section>
-    <div class="container">
+    <div class="container-xl">
         <div class="heading row">
             <div class="col-lg-12 z-center-down position-relative py-5">
                 <h2 class="heading-back">OUTFIT</h2>
@@ -230,21 +269,36 @@
                 <h6>PRODUCTS</h6>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4">
+        <div class="row row-cols-lg-3 row-cols-3 d-none d-lg-flex">
+            <div class="col">
                 <div class="gender-container">
                     <img src="{% static 'images/gender.webp' %}" alt="">
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col">
                 <div class="gender-container">
                     <img src="{% static 'images/gender2.webp' %}" alt="">
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col">
                 <div class="gender-container">
                     <img src="{% static 'images/gender3.webp' %}" alt="">
                 </div>
+            </div>
+        </div>
+        <div class="row d-block d-lg-none">
+            <div class="col-lg-12">
+                 <div class="carousel-wrap">
+                    <div class="owl-carousel category-carousel">
+                        <div class="item">
+                            <div class="col">
+                                <div class="gender-container">
+                                    <img src="{% static 'images/gender.webp' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>
@@ -252,9 +306,9 @@
 <section class="home-grid-section">
     <div class="container-fluid">
         <div class="row py-5">
-            <div class="col-lg-6 overflow_hidden">
+            <div class="col-lg-6 col-md-6 col-12 overflow_hidden">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-6">
                         <div class="block-product" style="border-bottom: 1px solid #ccc">
                             <div class="name bebas">Air Griffey 1 Max</div>
                             <div class="price d-flex align-items-center bebas">
@@ -262,7 +316,7 @@
                                         class="fa-solid fa-chevron-right"></i></a>
                             </div>
                             <div class="respone_image">
-                                <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/img-7_380x.jpg?v=1681806334"
+                                <img src="{% static 'images/home-grid-shoes-1.jpg' %}"
                                     alt="" title="">
                             </div>
                         </div>
@@ -273,15 +327,15 @@
                                         class="fa-solid fa-chevron-right"></i></a>
                             </div>
                             <div class="respone_image">
-                                <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/img-8_380x.jpg?v=1681809475"
+                                <img src="{% static 'images/home-grid-shoes-3.jpg' %}"
                                     alt="" title="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 p-0 position-relative overflow_hidden">
+                    <div class="col-lg-6 col-6 p-0 position-relative overflow_hidden">
                         <div class="position-relative z-grid-banner">
                             <div>
-                                <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/img-9_380x.jpg?v=1681805517"
+                                <img src="{% static 'images/home-grid-shoes-banner-1.jpg' %}"
                                     alt="" title="">
                             </div>
                             <div class="d-flex z-grid-btn-1">
@@ -289,11 +343,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 p-0 position-relative overflow_hidden">
+                    <div class="col-lg-12 col-12 p-0 position-relative overflow_hidden">
                         <div class="position-relative z-grid-banner">
                             <div>
-                                <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/img-10_768x.jpg?v=1681805517"
-                                    alt="" title="" style="height: 309px;">
+                                <img src="{% static 'images/grid-img-hori-1.jpg' %}"
+                                    alt="" title="" style="">
                             </div>
                             <div class="d-flex z-grid-btn-1">
                                 <a href="#" class="z-button">hello</a>
@@ -302,9 +356,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 overflow_hidden">
+            <div class="col-lg-6 col-md-6 col-12 overflow_hidden">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-6">
                         <div class="block-product" style="border-right: 1px solid #ccc">
                             <div class="name bebas">Air Griffey 1 Max</div>
                             <div class="price d-flex align-items-center bebas">
@@ -312,12 +366,12 @@
                                         class="fa-solid fa-chevron-right"></i></a>
                             </div>
                             <div class="respone_image">
-                                <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/img-7_380x.jpg?v=1681806334"
+                                <img src="{% static 'images/home-grid-shoes-2.jpg' %}"
                                     alt="" title="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-6">
                         <div class="block-product">
                             <div class="name bebas">Air Griffey 1 Max</div>
                             <div class="price d-flex align-items-center bebas">
@@ -325,15 +379,15 @@
                                         class="fa-solid fa-chevron-right"></i></a>
                             </div>
                             <div class="respone_image">
-                                <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/img-8_380x.jpg?v=1681809475"
+                                <img src="{% static 'images/home-grid-shoes-4.jpg' %}"
                                     alt="" title="">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 p-0 position-relative overflow_hidden">
+                    <div class="col-lg-12 col-12 p-0 position-relative overflow_hidden">
                         <div class="z-grid-banner">
                             <div>
-                                <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/banner_768x.jpg?v=1682510657"
+                                <img src="{% static 'images/home-grid-shoes-banner-2.jpg' %}"
                                     alt="" title="">
                             </div>
                         </div>
@@ -352,10 +406,10 @@
                 <h6>Mens</h6>
             </div>
         </div>
-        <div class="row pb-5 mb-4">
+        <div class="row pb-5 mb-xl-4 mb-0">
             <div class="col-lg-12 heading text-center">
                 <div class="carousel-wrap">
-                    <div class="owl-carousel home-product">
+                    <div class="owl-carousel home-product remove-carousel-nav">
                         <div class="item">
                             <img src="{% static 'images/nike-1.webp' %}" />
                         </div>
@@ -381,7 +435,7 @@
     </div>
 </section>
 
-<section class="overflow-hidden py-5">
+<section class="overflow-hidden pb-5 pt-0 pt-xl-5">
     <div class="container container-right">
         <div class="row py-5">
             <div class="col-lg-12">
@@ -478,18 +532,18 @@
                 <h6>PRODUCTS</h6>
             </div>
         </div>
-        <div class="row py-3">
-            <div class="col-lg-4">
+        <div class="row py-3 row-cols-3 row-cols-lg-3">
+            <div class="col">
                 <div class="gender-container">
                     <img src="{% static 'images/nike3ad02.png' %}" alt="">
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col">
                 <div class="gender-container">
                     <img src="{% static 'images/nike3ad03.png' %}" alt="">
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col">
                 <div class="gender-container">
                     <img src="{% static 'images/nike3ad01.png' %}" alt="">
                 </div>
@@ -504,7 +558,7 @@
                 </div>
                 <div class="product-card-2 position-absolute">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 col-8">
                             <div>
                                 <h2>Retro Favorites</h2>
                                 <h6>Level up your sneaker rotation with top selling Jordan Retros.</h6>
@@ -580,9 +634,9 @@
     </div>
 </section>
 <section>
-    <div class="container">
-        <div class="row py-5">
-            <div class="col-lg-4">
+    <div class="container-xl">
+        <div class="row py-5 row-cols-3">
+            <div class="col">
                 <div class="policy__item--content text-md-center z-center-down overflow_hidden h-100">
                     <div class="policy-icon">
                             <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/p-10_200x.png?v=1681872656"
@@ -594,7 +648,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col">
                 <div class="policy__item--content text-md-center z-center-down overflow_hidden h-100">
                     <div class="policy-icon">
                             <img src="https://similux-jewelry.myshopify.com/cdn/shop/files/p-8_200x.png?v=1681872685"
@@ -606,7 +660,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col">
                 <div class="policy__item--content text-md-center z-center-down overflow_hidden h-100">
                     <div class="policy-icon">
                             <img src="	https://similux-jewelry.myshopify.com/cdn/shop/files/p-12_200x.png?v=1681872701"
