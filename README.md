@@ -142,4 +142,8 @@ git push origin my-feature
 
 This project is licensed under the MIT License. Feel free to modify and use the code according to your needs.
 
+<<<<<<< HEAD
 Please note that this readme file is written in HTML markup language to be used directly on your README.md file.
+=======
+Please note that this readme file is written in HTML markup language to be used directly on your README.md file.
+>>>>>>> 16bb68dc83d4c4b9dcee0b1af0e9b07e91318759
