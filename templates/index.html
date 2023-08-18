@@ -196,7 +196,7 @@
                                     {% endif %}
                                     <div class="">
                                         <div>
-                                            <img src="{{product.product_image}}">
+                                            <img src="../media/{{product.product_image}}">
                                             <div class="actions">
                                                 <form method="POST" action="{% url 'add_to_cart' product.product_id %}">
                                                     {% csrf_token %}
@@ -528,7 +528,7 @@
                                     {% endif %}
                                     <div class="">
                                         <div>
-                                            <img src="{{product.product_image}}">
+                                            <img src="../media/{{product.product_image}}">
                                             <div class="actions">
                                                 <form method="POST" action="{% url 'add_to_cart' product.product_id %}">
                                                     {% csrf_token %}

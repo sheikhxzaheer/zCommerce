@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-dmm9bhzrvh3cumncqc$vhi49fa&^!f$(v3@#-hvb+-&&l5tsiu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -102,28 +102,28 @@ WSGI_APPLICATION = 'zaheer.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'ga3qDp5djjTMNjvXzagn',
-        'HOST': 'containers-us-west-155.railway.app',
-        'PORT': '7179',
-        
-    }
-}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'verceldb',
-#         'USER': 'default',
-#         'PASSWORD': 'zU0cw2lGpNBA',
-#         'HOST': 'ep-steep-glade-805441-pooler.ap-southeast-1.postgres.vercel-storage.com',
-#         'PORT': '',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'ga3qDp5djjTMNjvXzagn',
+#         'HOST': 'containers-us-west-155.railway.app',
+#         'PORT': '7179',
         
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'zU0cw2lGpNBA',
+        'HOST': 'ep-steep-glade-805441-pooler.ap-southeast-1.postgres.vercel-storage.com',
+        'PORT': '',
+        
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
