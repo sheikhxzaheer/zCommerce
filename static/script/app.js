@@ -19,7 +19,7 @@ $(".home-product").owlCarousel({
   responsive: {
 
     0: {
-      items: 1
+      items: 4
     },
     480: {
       items: 4
@@ -45,7 +45,7 @@ $(".popular-product-carousel").owlCarousel({
   responsive: {
 
     0: {
-      items: 1
+      items: 2
     },
     480: {
       items: 2
@@ -124,7 +124,7 @@ $(".category-carousel").owlCarousel({
       items: 1
     },
     480: {
-      items: 2
+      items: 1
     },
     767: {
       items: 2

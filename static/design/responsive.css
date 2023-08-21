@@ -143,6 +143,10 @@
   .floating-carousel .owl-nav{
     display: none !important;
   }
+  .floating-card-content-container {
+    bottom: 30px;
+    justify-content: start;
+}
 }
 @media only screen and (max-width: 576px) {
   .heading-back {
@@ -208,5 +212,29 @@
 .home-product .owl-nav .owl-next {
   right: 58%;
 }
+.z-button, .z-button-outline{
+  padding: 6px 30px;
+  font-size: 14px;
+}
+.block-product h3{
+  font-size: 18px;
+}
+.block-product .price{
+  bottom: 12px;
+  left: 75px;
+}
+}
+@media only screen and (max-width: 420px) {
+  .product-card-2 h6{
+    font-size: 11px;
+  }
+  .product-card-2 h2{
+    font-size: 22px;
+  }
+  .block-product .price a{
+    margin-left: 5px;
+  }
+  
+  
 }
 @media only screen and (max-width: 405px) {}
