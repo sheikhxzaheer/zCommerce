@@ -71,7 +71,12 @@
             </div>
         </div>
     </nav>
-    <nav role="navigation" class="d-block d-md-none">
+    <nav role="navigation" class="d-flex justify-content-between d-md-none">
+        <div class="nav-logo-container ms-3 ms-md-0">
+            <a href="/">
+                <img src="{% static 'images/zade-logo.png' %}" alt="" class="">
+            </a>
+        </div>
         <div id="menuToggle">
          
           <input type="checkbox" />
@@ -83,9 +88,10 @@
             <a href="#"><li>About</li></a>
             <a href="#"><li>Info</li></a>
             <a href="#"><li>Contact</li></a>
-            <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+            
           </ul>
         </div>
+        
       </nav>
     {% block content %}
     {% endblock content %}

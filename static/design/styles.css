@@ -9,7 +9,12 @@
     text-decoration: none;
     list-style: none;
 }
+html{
+    overflow-x: hidden;
+    
+}
 body {
+    overflow-x: hidden;
     font-family: 'Quicksand', sans-serif;
 }
 :root {
@@ -961,18 +966,15 @@ footer ul li {
 }
 
 /* hamburger */
-#menuToggle
-{
-  display: block;
-  position: relative;
-  top: 5px;
-  left: 24px;
-  width: fit-content;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 5px;
+    left: -10px;
+    width: fit-content;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #menuToggle a
@@ -989,21 +991,17 @@ footer ul li {
 }
 
 
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; 
-  z-index: 2; 
-  
-  -webkit-touch-callout: none;
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
 }
 #menuToggle span
 {
@@ -1049,22 +1047,19 @@ footer ul li {
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+#menu {
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    margin: -46px 0 0 -250px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
