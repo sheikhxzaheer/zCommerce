@@ -147,6 +147,10 @@
     bottom: 30px;
     justify-content: start;
   }
+  .product-search-container .product-search-input{
+    width: 100%;
+    padding: 7px 25px;
+  }
 }
 @media only screen and (max-width: 576px) {
   .heading-back {
@@ -222,6 +226,9 @@
   .block-product .price {
     bottom: 10px;
     left: 75px;
+  }
+  .z-bnljksdfewv{
+    flex-direction: column;
   }
 }
 @media only screen and (max-width: 420px) {
