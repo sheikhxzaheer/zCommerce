@@ -17,23 +17,23 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 ">
+            <div class="col-lg-5 col-md-5 ">
                 <div class="product-details-img-container">
                     <img src="{{singleProduct.product_image}}" alt="">
                     <div class="row z-center py-4">
-                        <di class="col-lg-2">
+                        <div class="col-lg-2 col-md-3">
                             <img src="{{singleProduct.product_image}}" alt="">
-                        </di>
-                        <di class="col-lg-2">
+                        </div>
+                        <div class="col-lg-2 col-md-3">
                             <img src="{{singleProduct.product_image}}" alt="">
-                        </di>
-                        <di class="col-lg-2">
+                        </div>
+                        <div class="col-lg-2 col-md-3">
                             <img src="{{singleProduct.product_image}}" alt="">
-                        </di>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-7 py-5 px-5">
+            <div class="col-lg-7 col-md-7 py-5 px-3 px-lg-5">
                 <div class="product-details-content ">
                     <h2 class="fw-semibold">{{singleProduct.product_title}}</h2>
                     <div class="d-flex gap-4 prod-content-container">
@@ -51,9 +51,9 @@
                     </div>
                     <h6>Avilability: <span>In Stock</span></h6>
                 </div>
-                <div class="product-details-desc py-4">
-                    <p>{{singleProduct.product_description | safe}}
-                    </p>
+                <div class="product-details-desc py-2 py-lg-4">
+                    {{singleProduct.product_description | safe}}
+                
                 </div>
                 <div class="product-details-button-container d-flex align-items-center gap-3">
                     <form method="POST" action="{% url 'add_to_cart' singleProduct.product_id %}">
@@ -66,7 +66,7 @@
                         <a href="#" class="z-button-outline">Favourite</a>
                     </div>
                 </div>
-                <div class="tab-container mt-5">
+                <div class="tab-container mt-4 mt-lg-5">
                     <ul class="tab-menu">
                         <li class="active">Description</li>
                         <li>Specification</li>
