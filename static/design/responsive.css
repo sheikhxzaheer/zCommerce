@@ -236,6 +236,11 @@
   .z-bnljksdfewv{
     flex-direction: column;
   }
+  .btn-close:focus{
+    outline: none;
+    box-shadow: none;
+    opacity: unset;
+  }
 }
 @media only screen and (max-width: 420px) {
   .product-card-2 h6 {
@@ -245,11 +250,15 @@
     font-size: 22px;
   }
   .block-product .price a {
-    margin-left: 5px;
+    margin-left: 3px;
+  }
+  .related-product-carousel .owl-nav>div {
+    bottom: unset !important;
+    top: -21%;
   }
   .home-product .owl-nav>div {
     bottom: unset !important;
-    top: -20%;
+    top: -21%;
   }
   .home-product .owl-nav .owl-next {
     right: 59%;
@@ -259,24 +268,34 @@
   }
 }
 @media only screen and (max-width: 405px) {
+  .related-product-carousel .owl-nav .owl-next {
+    right: 4%;
+  }
+  .related-product-carousel .owl-nav .owl-prev {
+    right: 15%;
+  }
   .home-product .owl-nav .owl-next {
-    right: 61%;
+    right: 4%;
   }
   .home-product .owl-nav .owl-prev {
-    right: 64%;
+    right: 15%;
   }
   .home-product-slider hr {
     width: 18% !important;
   }
   .block-product .price {
-    bottom: 10px;
+    bottom: 8px;
     left: 58px;
   }
   .block-product h3 {
     font-size: 18px;
   }
   .prod-content-container h2 {
-    font-size: 27px;
+    font-size: 24px;
+    font-family: 'Bebas Neue', cursive;
+  }
+  .prod-content-container h4 {
+    font-size: 20px;
     font-family: 'Bebas Neue', cursive;
   }
   .offer-price {

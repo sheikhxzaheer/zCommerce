@@ -6,6 +6,32 @@ window.addEventListener("scroll", function () {
 
 
 
+$(".related-product-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    "<i class='fa-solid fa-chevron-left'></i>",
+    "<i class='fa-solid fa-chevron-right'></i>"
+  ],
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsive: {
+
+    0: {
+      items: 4
+    },
+    480: {
+      items: 4
+    },
+    767: {
+      items: 4
+    },
+    1000: {
+      items: 5
+    }
+  }
+});
 $(".home-product").owlCarousel({
   loop: true,
   margin: 10,
